@@ -1,4 +1,8 @@
 # Proyecto de Monitoreo Operativo y Análisis de Vibraciones con IA
+[![Python](https://img.shields.io/badge/Python-3.9+-blue?logo=python)](https://python.org)
+[![Google Gemini](https://img.shields.io/badge/Google%20Gemini-API-orange?logo=google)](https://ai.google.dev)
+[![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
+[![GitHub](https://img.shields.io/badge/GitHub-Repositorio-black?logo=github)](https://github.com)
 
 **Monitoreo de Motor Eléctrico 110V - Detección de Anomalías mediante IA**
 
@@ -17,41 +21,33 @@ El proyecto sigue la metodología **CRISP-DM** y mantiene una **separación estr
 - **IA (GEM)** actúa exclusivamente como redactor de informes técnicos
 - **Prohibido** que la IA realice cálculos matemáticos o invente variables
 
-Instalación y Configuración
-Sigue estos pasos para levantar el entorno de desarrollo desde cero.
+## Ejecutar Localmente
 
-1. Clonar el repositorio
-bash
-git clone <https://github.com/joseorozco201930428-bit/Proyecto-Vibraciones.git>
+### Requisitos Previos
+
+- Python 3.12 o superior
+- pip (gestor de paquetes de Python)
+
+### Instalación
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/joseorozco201930428-bit/Proyecto-Vibraciones.git
 cd proyecto_vibraciones
-2. Crear y activar entorno virtual
-Nota para usuarios de Linux (Ubuntu/Debian):
-bash
-sudo apt install python3-full
-Crear entorno virtual:
 
-bash
-python3 -m venv env
-Activar entorno:
+# 2. Crear entorno virtual
+python -m venv venv
+source venv/bin/activate  # En Windows: venv\Scripts\activate
+```
+### Ejecución de scripts
+```bash
+# 1. Generar datos sintéticos
+python3 /generador_datos.py
 
-Sistema	Comando
-Linux/macOS	source env/bin/activate
-Windows (Git Bash)	source env/Scripts/activate
-Windows (CMD)	env\Scripts\activate
+# 2. Analizar datos y detectar anomalías (pendiente)
+python3 /analizador_datos.py
 
-Crea el archivo .env en la raíz del proyecto:
-
-
-Ejecución del Proyecto
-Ejecutar el Generador de Datos (Grupo Datos)
-bash
-python3 generador_datos.py
-Ejecutar el Analizador de Datos (Grupo Análisis)
-bash
-python3 analizador_datos.py
-Ejecutar el Comunicador con IA (Grupo IA)
-bash
+# 3. Generar informes con IA (fase inicial, solo comunicación)
 python3 comunicador_gem.py
-Ejecutar el Pipeline Completo
-bash
+
+# 4. Ejecutar completa
 python3 pipeline_completo.py
