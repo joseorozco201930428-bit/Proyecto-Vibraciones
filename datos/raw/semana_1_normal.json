@@ -1,0 +1,415 @@
+{
+  "semana": 1,
+  "equipo_id": "MOTOR_BOMBA_110V_01",
+  "fecha_inicio": "2026-08-10T00:00:00Z",
+  "fecha_fin": "2026-08-16T23:59:00Z",
+  "escenario": "normal",
+  "total_registros": 45,
+  "registros": [
+    {
+      "timestamp": "2026-08-10T00:00:00Z",
+      "rpm": 3553,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T00:05:00Z",
+      "rpm": 3525,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T00:10:00Z",
+      "rpm": 3537,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T00:15:00Z",
+      "rpm": 3521,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T00:20:00Z",
+      "rpm": 3532,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T00:25:00Z",
+      "rpm": 3575,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T00:30:00Z",
+      "rpm": 3562,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T00:35:00Z",
+      "rpm": 3535,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T00:40:00Z",
+      "rpm": 3521,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T00:45:00Z",
+      "rpm": 3567,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T00:50:00Z",
+      "rpm": 3568,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T00:55:00Z",
+      "rpm": 3578,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T01:00:00Z",
+      "rpm": 3547,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T01:05:00Z",
+      "rpm": 3537,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T01:10:00Z",
+      "rpm": 3542,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T01:15:00Z",
+      "rpm": 3550,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T01:20:00Z",
+      "rpm": 3557,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T01:25:00Z",
+      "rpm": 3558,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T01:30:00Z",
+      "rpm": 3543,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T01:35:00Z",
+      "rpm": 3536,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T01:40:00Z",
+      "rpm": 3533,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T01:45:00Z",
+      "rpm": 3554,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T01:50:00Z",
+      "rpm": 3531,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T01:55:00Z",
+      "rpm": 3566,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T02:00:00Z",
+      "rpm": 3577,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T02:05:00Z",
+      "rpm": 3546,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T02:10:00Z",
+      "rpm": 3551,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T02:15:00Z",
+      "rpm": 3531,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T02:20:00Z",
+      "rpm": 3563,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T02:25:00Z",
+      "rpm": 3562,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T02:30:00Z",
+      "rpm": 3536,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T02:35:00Z",
+      "rpm": 3565,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T02:40:00Z",
+      "rpm": 3528,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T02:45:00Z",
+      "rpm": 3567,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T02:50:00Z",
+      "rpm": 3562,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T02:55:00Z",
+      "rpm": 3540,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T03:00:00Z",
+      "rpm": 3540,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T03:05:00Z",
+      "rpm": 3527,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T03:10:00Z",
+      "rpm": 3542,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T03:15:00Z",
+      "rpm": 3541,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T03:20:00Z",
+      "rpm": 3542,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T03:25:00Z",
+      "rpm": 3572,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T03:30:00Z",
+      "rpm": 3535,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T03:35:00Z",
+      "rpm": 3556,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    },
+    {
+      "timestamp": "2026-08-10T03:40:00Z",
+      "rpm": 3577,
+      "frecuencias_medidas_hz": [
+        60.0,
+        120.0,
+        180.0
+      ]
+    }
+  ]
+}
