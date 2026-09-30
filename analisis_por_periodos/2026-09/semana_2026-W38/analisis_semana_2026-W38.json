@@ -1,0 +1,4115 @@
+{
+  "resumen_general": {
+    "total_registros": 39242,
+    "duracion_horas": 105.69,
+    "estado_predominante": "Normal"
+  },
+  "distribucion_estados": {
+    "Normal": 29272,
+    "Alerta_AccelX": 2659,
+    "Alerta_Critica": 1081,
+    "Alerta_Temp": 6228,
+    "Alerta_RPM": 2
+  },
+  "analisis_rpm": {
+    "rpm_promedio": 3477.1,
+    "rpm_desviacion_estandar": 78.62,
+    "rpm_min": 87.0,
+    "rpm_max": 5090.0,
+    "rpm_linea_base": 3450,
+    "desviacion_porcentual": 0.79
+  },
+  "analisis_temperatura": {
+    "temperatura_promedio": 54.6,
+    "temperatura_desviacion_estandar": 15.27,
+    "temperatura_min": 15.2,
+    "temperatura_max": 78.7
+  },
+  "analisis_vibracion": {
+    "accelX_promedio": 10.474,
+    "accelY_promedio": 0.672,
+    "accelX_max": 13.847,
+    "accelY_max": 3.334,
+    "rms_vibracion_m_s2": 0.8346
+  },
+  "analisis_frecuencia": {
+    "firma_esperada_hz": [
+      57.5,
+      115.0,
+      172.5
+    ],
+    "firma_promedio_hz": [
+      58.0,
+      115.9,
+      173.9
+    ],
+    "firma_maxima_hz": [
+      84.8,
+      169.7,
+      254.5
+    ]
+  },
+  "tiempos_criticos": {
+    "primera_alerta_temperatura_min": 42.8,
+    "primera_alerta_rpm_min": 1065.8,
+    "primera_alerta_vibracion_x_min": 2.3,
+    "primera_alerta_vibracion_y_min": 6046.7
+  },
+  "picos": {
+    "rpm_max": {
+      "valor": 5090.0,
+      "timestamp": "2026-09-25T08:49:56+00:00Z"
+    },
+    "rpm_min": {
+      "valor": 87.0,
+      "timestamp": "2026-09-24T13:37:28+00:00Z"
+    },
+    "temperatura_max": {
+      "valor": 78.7,
+      "timestamp": "2026-09-24T19:12:31+00:00Z"
+    },
+    "accelX_max": {
+      "valor": 13.847,
+      "timestamp": "2026-09-22T00:38:08+00:00Z"
+    },
+    "accelY_max": {
+      "valor": 3.334,
+      "timestamp": "2026-09-25T13:13:27+00:00Z"
+    }
+  },
+  "datos_grafica": [
+    {
+      "timestamp": "2026-09-21T08:26:44+00:00Z",
+      "rpm": 3468.0,
+      "temperatura": 19.5,
+      "accelX": 10.026,
+      "accelY": 0.591,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T08:33:23+00:00Z",
+      "rpm": 3462.0,
+      "temperatura": 32.6,
+      "accelX": 10.972,
+      "accelY": 0.659,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T08:38:23+00:00Z",
+      "rpm": 3500.0,
+      "temperatura": 40.4,
+      "accelX": 11.598,
+      "accelY": 0.711,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T08:48:53+00:00Z",
+      "rpm": 3517.0,
+      "temperatura": 52.3,
+      "accelX": 12.185,
+      "accelY": 0.689,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T08:54:53+00:00Z",
+      "rpm": 3456.0,
+      "temperatura": 58.5,
+      "accelX": 11.925,
+      "accelY": 0.753,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T08:57:29+00:00Z",
+      "rpm": 3460.0,
+      "temperatura": 60.7,
+      "accelX": 11.68,
+      "accelY": 0.564,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T09:00:05+00:00Z",
+      "rpm": 3476.0,
+      "temperatura": 62.7,
+      "accelX": 10.317,
+      "accelY": 0.639,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T09:02:26+00:00Z",
+      "rpm": 3484.0,
+      "temperatura": 65.1,
+      "accelX": 10.632,
+      "accelY": 1.158,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T09:04:59+00:00Z",
+      "rpm": 3543.0,
+      "temperatura": 66.5,
+      "accelX": 10.693,
+      "accelY": 0.824,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T09:07:17+00:00Z",
+      "rpm": 3341.0,
+      "temperatura": 68.5,
+      "accelX": 10.752,
+      "accelY": 0.999,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T09:10:14+00:00Z",
+      "rpm": 3481.0,
+      "temperatura": 70.7,
+      "accelX": 10.912,
+      "accelY": 0.972,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-21T09:12:20+00:00Z",
+      "rpm": 3519.0,
+      "temperatura": 71.7,
+      "accelX": 12.139,
+      "accelY": 0.889,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-21T09:16:44+00:00Z",
+      "rpm": 3461.0,
+      "temperatura": 75.4,
+      "accelX": 10.142,
+      "accelY": 0.757,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-21T09:48:36+00:00Z",
+      "rpm": 3512.0,
+      "temperatura": 28.9,
+      "accelX": 11.121,
+      "accelY": 0.693,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T09:57:42+00:00Z",
+      "rpm": 3483.0,
+      "temperatura": 41.4,
+      "accelX": 12.764,
+      "accelY": 0.536,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T10:01:18+00:00Z",
+      "rpm": 3497.0,
+      "temperatura": 45.8,
+      "accelX": 11.443,
+      "accelY": 0.746,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T10:04:33+00:00Z",
+      "rpm": 3491.0,
+      "temperatura": 49.4,
+      "accelX": 13.328,
+      "accelY": 0.637,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-21T10:08:15+00:00Z",
+      "rpm": 3502.0,
+      "temperatura": 53.0,
+      "accelX": 12.344,
+      "accelY": 0.563,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T10:12:18+00:00Z",
+      "rpm": 3540.0,
+      "temperatura": 56.6,
+      "accelX": 10.36,
+      "accelY": 0.618,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T10:16:03+00:00Z",
+      "rpm": 3487.0,
+      "temperatura": 59.7,
+      "accelX": 10.929,
+      "accelY": 0.647,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T10:19:00+00:00Z",
+      "rpm": 3528.0,
+      "temperatura": 61.9,
+      "accelX": 12.273,
+      "accelY": 0.642,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T10:22:42+00:00Z",
+      "rpm": 3491.0,
+      "temperatura": 64.2,
+      "accelX": 10.69,
+      "accelY": 0.763,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T10:26:45+00:00Z",
+      "rpm": 3528.0,
+      "temperatura": 67.8,
+      "accelX": 11.953,
+      "accelY": 0.716,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T10:29:45+00:00Z",
+      "rpm": 3423.0,
+      "temperatura": 69.1,
+      "accelX": 10.123,
+      "accelY": 0.701,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T10:33:24+00:00Z",
+      "rpm": 3440.0,
+      "temperatura": 71.4,
+      "accelX": 10.762,
+      "accelY": 0.779,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-21T10:37:00+00:00Z",
+      "rpm": 3448.0,
+      "temperatura": 73.0,
+      "accelX": 12.457,
+      "accelY": 0.868,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-21T10:39:51+00:00Z",
+      "rpm": 3473.0,
+      "temperatura": 75.1,
+      "accelX": 10.707,
+      "accelY": 0.862,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-21T11:13:33+00:00Z",
+      "rpm": 3527.0,
+      "temperatura": 28.3,
+      "accelX": 11.515,
+      "accelY": 0.651,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T11:18:12+00:00Z",
+      "rpm": 3506.0,
+      "temperatura": 34.4,
+      "accelX": 10.156,
+      "accelY": 0.696,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T11:24:30+00:00Z",
+      "rpm": 3535.0,
+      "temperatura": 42.0,
+      "accelX": 12.616,
+      "accelY": 0.744,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T11:26:00+00:00Z",
+      "rpm": 3471.0,
+      "temperatura": 43.9,
+      "accelX": 11.179,
+      "accelY": 0.628,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T11:29:51+00:00Z",
+      "rpm": 3475.0,
+      "temperatura": 47.1,
+      "accelX": 11.982,
+      "accelY": 0.49,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T11:35:36+00:00Z",
+      "rpm": 3518.0,
+      "temperatura": 52.2,
+      "accelX": 12.195,
+      "accelY": 0.821,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T11:39:54+00:00Z",
+      "rpm": 3470.0,
+      "temperatura": 55.8,
+      "accelX": 10.701,
+      "accelY": 0.527,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T11:42:24+00:00Z",
+      "rpm": 3500.0,
+      "temperatura": 57.2,
+      "accelX": 10.6,
+      "accelY": 0.606,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T11:45:18+00:00Z",
+      "rpm": 3482.0,
+      "temperatura": 59.2,
+      "accelX": 12.534,
+      "accelY": 0.591,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T11:48:54+00:00Z",
+      "rpm": 3438.0,
+      "temperatura": 61.5,
+      "accelX": 11.255,
+      "accelY": 0.748,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T11:53:09+00:00Z",
+      "rpm": 3533.0,
+      "temperatura": 64.4,
+      "accelX": 11.178,
+      "accelY": 0.635,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T11:55:51+00:00Z",
+      "rpm": 3394.0,
+      "temperatura": 65.6,
+      "accelX": 11.756,
+      "accelY": 0.598,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T11:58:57+00:00Z",
+      "rpm": 3432.0,
+      "temperatura": 67.3,
+      "accelX": 12.257,
+      "accelY": 0.872,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T12:01:21+00:00Z",
+      "rpm": 3453.0,
+      "temperatura": 68.6,
+      "accelX": 11.622,
+      "accelY": 0.741,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T12:04:15+00:00Z",
+      "rpm": 3437.0,
+      "temperatura": 70.1,
+      "accelX": 12.475,
+      "accelY": 0.8,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-21T12:06:27+00:00Z",
+      "rpm": 3449.0,
+      "temperatura": 71.0,
+      "accelX": 10.991,
+      "accelY": 0.718,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-21T12:09:36+00:00Z",
+      "rpm": 3488.0,
+      "temperatura": 72.9,
+      "accelX": 10.691,
+      "accelY": 0.819,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-21T12:10:57+00:00Z",
+      "rpm": 3478.0,
+      "temperatura": 73.5,
+      "accelX": 12.01,
+      "accelY": 0.89,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-21T12:12:48+00:00Z",
+      "rpm": 3430.0,
+      "temperatura": 74.5,
+      "accelX": 10.235,
+      "accelY": 0.803,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-21T12:47:20+00:00Z",
+      "rpm": 3448.0,
+      "temperatura": 30.4,
+      "accelX": 11.406,
+      "accelY": 0.552,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T12:53:56+00:00Z",
+      "rpm": 3482.0,
+      "temperatura": 39.6,
+      "accelX": 11.755,
+      "accelY": 0.447,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T13:02:38+00:00Z",
+      "rpm": 3469.0,
+      "temperatura": 48.7,
+      "accelX": 11.513,
+      "accelY": 0.736,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T13:07:17+00:00Z",
+      "rpm": 3444.0,
+      "temperatura": 53.3,
+      "accelX": 12.847,
+      "accelY": 0.793,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T13:10:02+00:00Z",
+      "rpm": 3591.0,
+      "temperatura": 55.1,
+      "accelX": 10.333,
+      "accelY": 0.764,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T13:13:08+00:00Z",
+      "rpm": 3483.0,
+      "temperatura": 58.2,
+      "accelX": 12.766,
+      "accelY": 0.578,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T13:16:50+00:00Z",
+      "rpm": 3437.0,
+      "temperatura": 60.3,
+      "accelX": 11.831,
+      "accelY": 0.528,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T13:19:20+00:00Z",
+      "rpm": 3456.0,
+      "temperatura": 62.3,
+      "accelX": 12.897,
+      "accelY": 0.553,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T13:23:44+00:00Z",
+      "rpm": 3463.0,
+      "temperatura": 65.2,
+      "accelX": 10.438,
+      "accelY": 0.84,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T13:27:47+00:00Z",
+      "rpm": 3447.0,
+      "temperatura": 67.9,
+      "accelX": 10.886,
+      "accelY": 0.902,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T13:31:47+00:00Z",
+      "rpm": 3452.0,
+      "temperatura": 70.4,
+      "accelX": 12.521,
+      "accelY": 0.891,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-21T13:34:02+00:00Z",
+      "rpm": 3473.0,
+      "temperatura": 71.5,
+      "accelX": 10.516,
+      "accelY": 0.974,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-21T13:36:53+00:00Z",
+      "rpm": 3318.0,
+      "temperatura": 73.2,
+      "accelX": 10.592,
+      "accelY": 1.002,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-21T13:40:35+00:00Z",
+      "rpm": 3533.0,
+      "temperatura": 75.2,
+      "accelX": 10.401,
+      "accelY": 1.217,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-21T14:12:34+00:00Z",
+      "rpm": 3455.0,
+      "temperatura": 31.7,
+      "accelX": 11.948,
+      "accelY": 0.553,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T14:20:46+00:00Z",
+      "rpm": 3518.0,
+      "temperatura": 41.9,
+      "accelX": 11.733,
+      "accelY": 0.71,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T14:28:49+00:00Z",
+      "rpm": 3496.0,
+      "temperatura": 49.5,
+      "accelX": 11.521,
+      "accelY": 0.634,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T14:36:16+00:00Z",
+      "rpm": 3424.0,
+      "temperatura": 55.3,
+      "accelX": 10.044,
+      "accelY": 0.559,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T14:40:34+00:00Z",
+      "rpm": 3513.0,
+      "temperatura": 58.2,
+      "accelX": 10.939,
+      "accelY": 0.566,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T14:44:43+00:00Z",
+      "rpm": 3486.0,
+      "temperatura": 61.4,
+      "accelX": 10.444,
+      "accelY": 0.655,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T14:49:49+00:00Z",
+      "rpm": 3490.0,
+      "temperatura": 64.2,
+      "accelX": 11.068,
+      "accelY": 0.79,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T14:51:52+00:00Z",
+      "rpm": 3415.0,
+      "temperatura": 65.2,
+      "accelX": 11.728,
+      "accelY": 0.763,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T14:53:31+00:00Z",
+      "rpm": 3481.0,
+      "temperatura": 66.0,
+      "accelX": 10.833,
+      "accelY": 0.814,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T14:57:58+00:00Z",
+      "rpm": 3620.0,
+      "temperatura": 68.5,
+      "accelX": 10.112,
+      "accelY": 0.958,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T15:01:16+00:00Z",
+      "rpm": 3556.0,
+      "temperatura": 70.1,
+      "accelX": 10.263,
+      "accelY": 0.993,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-21T15:03:55+00:00Z",
+      "rpm": 3501.0,
+      "temperatura": 71.8,
+      "accelX": 12.122,
+      "accelY": 0.869,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-21T15:05:49+00:00Z",
+      "rpm": 3450.0,
+      "temperatura": 72.6,
+      "accelX": 10.957,
+      "accelY": 0.993,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-21T15:31:26+00:00Z",
+      "rpm": 3477.0,
+      "temperatura": 19.1,
+      "accelX": 9.862,
+      "accelY": 0.618,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T15:40:20+00:00Z",
+      "rpm": 3481.0,
+      "temperatura": 33.0,
+      "accelX": 10.697,
+      "accelY": 0.585,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T15:44:14+00:00Z",
+      "rpm": 3523.0,
+      "temperatura": 38.5,
+      "accelX": 11.668,
+      "accelY": 0.775,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T15:52:26+00:00Z",
+      "rpm": 3570.0,
+      "temperatura": 47.2,
+      "accelX": 10.364,
+      "accelY": 0.576,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T15:56:14+00:00Z",
+      "rpm": 3410.0,
+      "temperatura": 50.6,
+      "accelX": 11.024,
+      "accelY": 0.501,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T16:02:50+00:00Z",
+      "rpm": 3408.0,
+      "temperatura": 56.4,
+      "accelX": 9.843,
+      "accelY": 0.659,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T16:05:38+00:00Z",
+      "rpm": 3477.0,
+      "temperatura": 58.3,
+      "accelX": 10.415,
+      "accelY": 0.635,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T16:06:50+00:00Z",
+      "rpm": 3477.0,
+      "temperatura": 59.7,
+      "accelX": 12.205,
+      "accelY": 0.557,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T16:09:59+00:00Z",
+      "rpm": 3446.0,
+      "temperatura": 61.7,
+      "accelX": 10.121,
+      "accelY": 0.582,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T16:12:11+00:00Z",
+      "rpm": 3451.0,
+      "temperatura": 62.9,
+      "accelX": 12.327,
+      "accelY": 0.823,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T16:14:35+00:00Z",
+      "rpm": 3422.0,
+      "temperatura": 64.5,
+      "accelX": 11.191,
+      "accelY": 0.819,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T16:17:17+00:00Z",
+      "rpm": 3482.0,
+      "temperatura": 66.2,
+      "accelX": 11.123,
+      "accelY": 0.865,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T16:19:47+00:00Z",
+      "rpm": 3411.0,
+      "temperatura": 67.9,
+      "accelX": 12.631,
+      "accelY": 0.973,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T16:22:02+00:00Z",
+      "rpm": 3348.0,
+      "temperatura": 69.1,
+      "accelX": 10.441,
+      "accelY": 0.737,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T16:24:29+00:00Z",
+      "rpm": 3491.0,
+      "temperatura": 70.7,
+      "accelX": 11.074,
+      "accelY": 0.9,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-21T16:27:47+00:00Z",
+      "rpm": 3393.0,
+      "temperatura": 72.7,
+      "accelX": 12.999,
+      "accelY": 0.787,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-21T16:55:59+00:00Z",
+      "rpm": 3459.0,
+      "temperatura": 24.4,
+      "accelX": 12.125,
+      "accelY": 0.663,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T17:01:23+00:00Z",
+      "rpm": 3455.0,
+      "temperatura": 32.9,
+      "accelX": 11.868,
+      "accelY": 0.576,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T17:06:17+00:00Z",
+      "rpm": 3491.0,
+      "temperatura": 40.1,
+      "accelX": 12.124,
+      "accelY": 0.578,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T17:08:17+00:00Z",
+      "rpm": 3519.0,
+      "temperatura": 42.5,
+      "accelX": 9.858,
+      "accelY": 0.479,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T17:12:29+00:00Z",
+      "rpm": 3432.0,
+      "temperatura": 46.9,
+      "accelX": 10.34,
+      "accelY": 0.63,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T17:15:11+00:00Z",
+      "rpm": 3447.0,
+      "temperatura": 49.4,
+      "accelX": 10.08,
+      "accelY": 0.691,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T17:19:20+00:00Z",
+      "rpm": 3433.0,
+      "temperatura": 53.3,
+      "accelX": 11.527,
+      "accelY": 0.567,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T17:21:53+00:00Z",
+      "rpm": 3581.0,
+      "temperatura": 55.5,
+      "accelX": 10.829,
+      "accelY": 0.727,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T17:25:44+00:00Z",
+      "rpm": 3497.0,
+      "temperatura": 58.9,
+      "accelX": 10.048,
+      "accelY": 0.652,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T17:29:59+00:00Z",
+      "rpm": 3536.0,
+      "temperatura": 61.6,
+      "accelX": 11.673,
+      "accelY": 0.572,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T17:35:20+00:00Z",
+      "rpm": 3515.0,
+      "temperatura": 65.3,
+      "accelX": 11.431,
+      "accelY": 0.659,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T17:37:59+00:00Z",
+      "rpm": 3407.0,
+      "temperatura": 66.9,
+      "accelX": 11.95,
+      "accelY": 0.744,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T17:40:17+00:00Z",
+      "rpm": 3462.0,
+      "temperatura": 68.5,
+      "accelX": 11.503,
+      "accelY": 0.841,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T17:43:29+00:00Z",
+      "rpm": 3476.0,
+      "temperatura": 70.3,
+      "accelX": 10.843,
+      "accelY": 0.842,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-21T17:46:08+00:00Z",
+      "rpm": 3446.0,
+      "temperatura": 72.3,
+      "accelX": 12.167,
+      "accelY": 0.959,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-21T17:48:53+00:00Z",
+      "rpm": 3470.0,
+      "temperatura": 73.4,
+      "accelX": 10.356,
+      "accelY": 0.898,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-21T17:51:20+00:00Z",
+      "rpm": 3302.0,
+      "temperatura": 74.8,
+      "accelX": 10.441,
+      "accelY": 0.935,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-21T18:27:30+00:00Z",
+      "rpm": 3496.0,
+      "temperatura": 34.9,
+      "accelX": 10.101,
+      "accelY": 0.724,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T18:35:09+00:00Z",
+      "rpm": 3478.0,
+      "temperatura": 44.1,
+      "accelX": 12.687,
+      "accelY": 0.642,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T18:39:48+00:00Z",
+      "rpm": 3508.0,
+      "temperatura": 49.0,
+      "accelX": 12.251,
+      "accelY": 0.641,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T18:45:06+00:00Z",
+      "rpm": 3472.0,
+      "temperatura": 53.7,
+      "accelX": 12.047,
+      "accelY": 0.525,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T18:52:09+00:00Z",
+      "rpm": 3454.0,
+      "temperatura": 58.7,
+      "accelX": 13.719,
+      "accelY": 0.69,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-21T18:55:27+00:00Z",
+      "rpm": 3511.0,
+      "temperatura": 61.0,
+      "accelX": 10.998,
+      "accelY": 0.632,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T18:59:03+00:00Z",
+      "rpm": 3554.0,
+      "temperatura": 63.4,
+      "accelX": 10.831,
+      "accelY": 0.606,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T19:01:54+00:00Z",
+      "rpm": 3458.0,
+      "temperatura": 65.2,
+      "accelX": 11.491,
+      "accelY": 0.726,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T19:04:42+00:00Z",
+      "rpm": 3388.0,
+      "temperatura": 67.0,
+      "accelX": 11.916,
+      "accelY": 0.949,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T19:08:03+00:00Z",
+      "rpm": 3444.0,
+      "temperatura": 68.9,
+      "accelX": 10.152,
+      "accelY": 0.89,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T19:12:15+00:00Z",
+      "rpm": 3396.0,
+      "temperatura": 71.1,
+      "accelX": 12.325,
+      "accelY": 0.88,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-21T19:15:18+00:00Z",
+      "rpm": 3463.0,
+      "temperatura": 72.5,
+      "accelX": 12.664,
+      "accelY": 0.887,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-21T19:17:33+00:00Z",
+      "rpm": 3341.0,
+      "temperatura": 74.0,
+      "accelX": 12.283,
+      "accelY": 0.762,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-21T19:50:37+00:00Z",
+      "rpm": 3484.0,
+      "temperatura": 21.6,
+      "accelX": 11.302,
+      "accelY": 0.668,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T19:59:07+00:00Z",
+      "rpm": 3463.0,
+      "temperatura": 33.8,
+      "accelX": 10.883,
+      "accelY": 0.655,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T20:04:46+00:00Z",
+      "rpm": 3477.0,
+      "temperatura": 40.6,
+      "accelX": 11.507,
+      "accelY": 0.526,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T20:08:25+00:00Z",
+      "rpm": 3416.0,
+      "temperatura": 43.8,
+      "accelX": 9.83,
+      "accelY": 0.692,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T20:11:52+00:00Z",
+      "rpm": 3536.0,
+      "temperatura": 47.1,
+      "accelX": 11.451,
+      "accelY": 0.337,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T20:16:13+00:00Z",
+      "rpm": 3430.0,
+      "temperatura": 50.8,
+      "accelX": 11.085,
+      "accelY": 0.597,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T20:19:40+00:00Z",
+      "rpm": 3514.0,
+      "temperatura": 53.5,
+      "accelX": 12.297,
+      "accelY": 0.502,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T20:24:16+00:00Z",
+      "rpm": 3445.0,
+      "temperatura": 56.8,
+      "accelX": 13.267,
+      "accelY": 0.718,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-21T20:27:52+00:00Z",
+      "rpm": 3475.0,
+      "temperatura": 59.3,
+      "accelX": 12.488,
+      "accelY": 0.469,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T20:31:01+00:00Z",
+      "rpm": 3511.0,
+      "temperatura": 61.7,
+      "accelX": 11.732,
+      "accelY": 0.628,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T20:32:46+00:00Z",
+      "rpm": 3541.0,
+      "temperatura": 62.5,
+      "accelX": 10.792,
+      "accelY": 0.452,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T20:37:34+00:00Z",
+      "rpm": 3498.0,
+      "temperatura": 65.0,
+      "accelX": 10.738,
+      "accelY": 0.603,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T20:41:13+00:00Z",
+      "rpm": 3528.0,
+      "temperatura": 67.1,
+      "accelX": 10.336,
+      "accelY": 0.8,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T20:45:13+00:00Z",
+      "rpm": 3474.0,
+      "temperatura": 68.9,
+      "accelX": 11.401,
+      "accelY": 0.989,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T20:47:55+00:00Z",
+      "rpm": 3434.0,
+      "temperatura": 70.6,
+      "accelX": 11.121,
+      "accelY": 0.791,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-21T20:50:22+00:00Z",
+      "rpm": 3509.0,
+      "temperatura": 71.5,
+      "accelX": 10.503,
+      "accelY": 0.732,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-21T20:54:58+00:00Z",
+      "rpm": 3482.0,
+      "temperatura": 74.0,
+      "accelX": 11.573,
+      "accelY": 0.871,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-21T21:26:33+00:00Z",
+      "rpm": 3475.0,
+      "temperatura": 23.3,
+      "accelX": 10.974,
+      "accelY": 0.822,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T21:32:48+00:00Z",
+      "rpm": 3463.0,
+      "temperatura": 33.0,
+      "accelX": 12.225,
+      "accelY": 0.65,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T21:36:57+00:00Z",
+      "rpm": 3557.0,
+      "temperatura": 38.3,
+      "accelX": 10.676,
+      "accelY": 0.7,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T21:42:03+00:00Z",
+      "rpm": 3485.0,
+      "temperatura": 44.0,
+      "accelX": 12.079,
+      "accelY": 0.497,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T21:45:15+00:00Z",
+      "rpm": 3505.0,
+      "temperatura": 47.4,
+      "accelX": 10.769,
+      "accelY": 0.519,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T21:47:24+00:00Z",
+      "rpm": 3497.0,
+      "temperatura": 49.7,
+      "accelX": 9.851,
+      "accelY": 0.573,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T21:51:42+00:00Z",
+      "rpm": 3471.0,
+      "temperatura": 53.0,
+      "accelX": 12.674,
+      "accelY": 0.678,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T21:56:24+00:00Z",
+      "rpm": 3483.0,
+      "temperatura": 57.1,
+      "accelX": 11.819,
+      "accelY": 0.597,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T21:58:33+00:00Z",
+      "rpm": 3517.0,
+      "temperatura": 58.4,
+      "accelX": 10.882,
+      "accelY": 0.462,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T22:03:48+00:00Z",
+      "rpm": 3476.0,
+      "temperatura": 61.8,
+      "accelX": 9.931,
+      "accelY": 0.619,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T22:06:15+00:00Z",
+      "rpm": 3506.0,
+      "temperatura": 63.9,
+      "accelX": 10.802,
+      "accelY": 0.763,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T22:09:24+00:00Z",
+      "rpm": 3468.0,
+      "temperatura": 65.6,
+      "accelX": 10.995,
+      "accelY": 0.732,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T22:16:51+00:00Z",
+      "rpm": 3481.0,
+      "temperatura": 69.9,
+      "accelX": 12.539,
+      "accelY": 0.919,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T22:20:03+00:00Z",
+      "rpm": 3472.0,
+      "temperatura": 71.8,
+      "accelX": 10.405,
+      "accelY": 0.905,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-21T22:21:36+00:00Z",
+      "rpm": 3459.0,
+      "temperatura": 72.4,
+      "accelX": 11.247,
+      "accelY": 0.708,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-21T22:25:00+00:00Z",
+      "rpm": 3451.0,
+      "temperatura": 74.6,
+      "accelX": 11.903,
+      "accelY": 0.974,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-21T22:57:26+00:00Z",
+      "rpm": 3514.0,
+      "temperatura": 27.0,
+      "accelX": 11.1,
+      "accelY": 0.67,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T23:01:56+00:00Z",
+      "rpm": 3485.0,
+      "temperatura": 34.3,
+      "accelX": 12.501,
+      "accelY": 0.618,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T23:07:05+00:00Z",
+      "rpm": 3508.0,
+      "temperatura": 41.4,
+      "accelX": 10.079,
+      "accelY": 0.678,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T23:12:29+00:00Z",
+      "rpm": 3432.0,
+      "temperatura": 47.4,
+      "accelX": 10.5,
+      "accelY": 0.64,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T23:16:35+00:00Z",
+      "rpm": 3552.0,
+      "temperatura": 51.5,
+      "accelX": 12.007,
+      "accelY": 0.616,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T23:18:47+00:00Z",
+      "rpm": 3472.0,
+      "temperatura": 54.0,
+      "accelX": 10.626,
+      "accelY": 0.554,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T23:21:26+00:00Z",
+      "rpm": 3419.0,
+      "temperatura": 56.0,
+      "accelX": 10.913,
+      "accelY": 0.67,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T23:25:59+00:00Z",
+      "rpm": 3494.0,
+      "temperatura": 60.2,
+      "accelX": 9.764,
+      "accelY": 0.457,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T23:30:11+00:00Z",
+      "rpm": 3494.0,
+      "temperatura": 62.9,
+      "accelX": 11.566,
+      "accelY": 0.688,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T23:32:38+00:00Z",
+      "rpm": 3457.0,
+      "temperatura": 64.4,
+      "accelX": 10.219,
+      "accelY": 0.513,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T23:33:59+00:00Z",
+      "rpm": 3408.0,
+      "temperatura": 65.5,
+      "accelX": 10.769,
+      "accelY": 0.796,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T23:37:11+00:00Z",
+      "rpm": 3510.0,
+      "temperatura": 67.6,
+      "accelX": 10.886,
+      "accelY": 0.823,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-21T23:39:23+00:00Z",
+      "rpm": 3442.0,
+      "temperatura": 69.1,
+      "accelX": 11.587,
+      "accelY": 0.743,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-21T23:41:38+00:00Z",
+      "rpm": 3512.0,
+      "temperatura": 70.4,
+      "accelX": 10.535,
+      "accelY": 1.047,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-21T23:46:02+00:00Z",
+      "rpm": 3458.0,
+      "temperatura": 73.1,
+      "accelX": 11.574,
+      "accelY": 0.77,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-21T23:47:56+00:00Z",
+      "rpm": 3384.0,
+      "temperatura": 74.1,
+      "accelX": 10.232,
+      "accelY": 0.804,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-21T23:48:59+00:00Z",
+      "rpm": 3457.0,
+      "temperatura": 74.6,
+      "accelX": 11.573,
+      "accelY": 0.858,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-22T00:14:32+00:00Z",
+      "rpm": 3468.0,
+      "temperatura": 28.1,
+      "accelX": 11.872,
+      "accelY": 0.696,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T00:22:14+00:00Z",
+      "rpm": 3451.0,
+      "temperatura": 39.8,
+      "accelX": 10.904,
+      "accelY": 0.709,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T00:24:47+00:00Z",
+      "rpm": 3497.0,
+      "temperatura": 43.3,
+      "accelX": 11.773,
+      "accelY": 0.472,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T00:30:29+00:00Z",
+      "rpm": 3495.0,
+      "temperatura": 49.6,
+      "accelX": 9.831,
+      "accelY": 0.509,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T00:36:14+00:00Z",
+      "rpm": 3454.0,
+      "temperatura": 55.1,
+      "accelX": 12.665,
+      "accelY": 0.626,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T00:39:20+00:00Z",
+      "rpm": 3502.0,
+      "temperatura": 57.7,
+      "accelX": 11.621,
+      "accelY": 0.731,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T00:44:11+00:00Z",
+      "rpm": 3503.0,
+      "temperatura": 61.2,
+      "accelX": 10.319,
+      "accelY": 0.633,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T00:47:20+00:00Z",
+      "rpm": 3497.0,
+      "temperatura": 63.7,
+      "accelX": 11.271,
+      "accelY": 0.658,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T00:49:08+00:00Z",
+      "rpm": 3418.0,
+      "temperatura": 65.4,
+      "accelX": 12.184,
+      "accelY": 0.986,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T00:51:05+00:00Z",
+      "rpm": 3495.0,
+      "temperatura": 66.5,
+      "accelX": 11.919,
+      "accelY": 0.738,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T00:53:20+00:00Z",
+      "rpm": 3355.0,
+      "temperatura": 67.8,
+      "accelX": 10.1,
+      "accelY": 1.015,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T00:56:02+00:00Z",
+      "rpm": 3508.0,
+      "temperatura": 69.7,
+      "accelX": 10.907,
+      "accelY": 1.026,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T00:58:41+00:00Z",
+      "rpm": 3425.0,
+      "temperatura": 70.9,
+      "accelX": 10.482,
+      "accelY": 0.877,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-22T01:00:35+00:00Z",
+      "rpm": 3526.0,
+      "temperatura": 72.2,
+      "accelX": 10.514,
+      "accelY": 0.832,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-22T01:25:03+00:00Z",
+      "rpm": 3444.0,
+      "temperatura": 16.0,
+      "accelX": 11.215,
+      "accelY": 0.485,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T01:32:06+00:00Z",
+      "rpm": 3494.0,
+      "temperatura": 27.9,
+      "accelX": 10.031,
+      "accelY": 0.647,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T01:35:18+00:00Z",
+      "rpm": 3476.0,
+      "temperatura": 32.3,
+      "accelX": 11.429,
+      "accelY": 0.515,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T01:38:48+00:00Z",
+      "rpm": 3453.0,
+      "temperatura": 36.8,
+      "accelX": 10.459,
+      "accelY": 0.601,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T01:42:51+00:00Z",
+      "rpm": 3470.0,
+      "temperatura": 41.3,
+      "accelX": 10.802,
+      "accelY": 0.504,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T01:53:51+00:00Z",
+      "rpm": 3463.0,
+      "temperatura": 51.7,
+      "accelX": 10.773,
+      "accelY": 0.775,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T01:55:42+00:00Z",
+      "rpm": 3481.0,
+      "temperatura": 52.8,
+      "accelX": 11.027,
+      "accelY": 0.499,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T02:00:48+00:00Z",
+      "rpm": 3490.0,
+      "temperatura": 57.1,
+      "accelX": 11.521,
+      "accelY": 0.612,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T02:06:36+00:00Z",
+      "rpm": 3495.0,
+      "temperatura": 61.1,
+      "accelX": 12.478,
+      "accelY": 0.524,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T02:10:18+00:00Z",
+      "rpm": 3484.0,
+      "temperatura": 63.8,
+      "accelX": 10.666,
+      "accelY": 1.093,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T02:13:33+00:00Z",
+      "rpm": 3497.0,
+      "temperatura": 65.5,
+      "accelX": 11.56,
+      "accelY": 0.941,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T02:15:00+00:00Z",
+      "rpm": 3383.0,
+      "temperatura": 66.4,
+      "accelX": 10.914,
+      "accelY": 0.994,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T02:16:51+00:00Z",
+      "rpm": 3388.0,
+      "temperatura": 67.6,
+      "accelX": 11.272,
+      "accelY": 1.049,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T02:18:30+00:00Z",
+      "rpm": 3469.0,
+      "temperatura": 68.5,
+      "accelX": 10.885,
+      "accelY": 0.961,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T02:20:45+00:00Z",
+      "rpm": 3427.0,
+      "temperatura": 69.7,
+      "accelX": 10.232,
+      "accelY": 0.889,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T02:22:21+00:00Z",
+      "rpm": 3485.0,
+      "temperatura": 71.0,
+      "accelX": 10.665,
+      "accelY": 0.879,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-22T02:26:21+00:00Z",
+      "rpm": 3506.0,
+      "temperatura": 73.0,
+      "accelX": 11.537,
+      "accelY": 0.907,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-22T02:54:19+00:00Z",
+      "rpm": 3500.0,
+      "temperatura": 19.6,
+      "accelX": 11.557,
+      "accelY": 0.62,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T03:00:46+00:00Z",
+      "rpm": 3483.0,
+      "temperatura": 29.5,
+      "accelX": 11.171,
+      "accelY": 0.568,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T03:09:52+00:00Z",
+      "rpm": 3509.0,
+      "temperatura": 40.2,
+      "accelX": 11.554,
+      "accelY": 0.735,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T03:16:28+00:00Z",
+      "rpm": 3514.0,
+      "temperatura": 46.8,
+      "accelX": 11.306,
+      "accelY": 0.81,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T03:20:40+00:00Z",
+      "rpm": 3445.0,
+      "temperatura": 50.1,
+      "accelX": 12.386,
+      "accelY": 0.81,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T03:24:40+00:00Z",
+      "rpm": 3511.0,
+      "temperatura": 53.1,
+      "accelX": 11.61,
+      "accelY": 0.738,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T03:26:07+00:00Z",
+      "rpm": 3554.0,
+      "temperatura": 54.4,
+      "accelX": 11.692,
+      "accelY": 0.625,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T03:28:52+00:00Z",
+      "rpm": 3504.0,
+      "temperatura": 56.7,
+      "accelX": 10.958,
+      "accelY": 0.595,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T03:32:31+00:00Z",
+      "rpm": 3441.0,
+      "temperatura": 58.7,
+      "accelX": 13.538,
+      "accelY": 0.821,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-22T03:35:13+00:00Z",
+      "rpm": 3455.0,
+      "temperatura": 60.7,
+      "accelX": 9.885,
+      "accelY": 0.608,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T03:39:46+00:00Z",
+      "rpm": 3466.0,
+      "temperatura": 63.1,
+      "accelX": 11.539,
+      "accelY": 0.7,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T03:42:31+00:00Z",
+      "rpm": 3443.0,
+      "temperatura": 65.1,
+      "accelX": 10.167,
+      "accelY": 1.165,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T03:44:55+00:00Z",
+      "rpm": 3496.0,
+      "temperatura": 66.1,
+      "accelX": 12.656,
+      "accelY": 0.776,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T03:46:37+00:00Z",
+      "rpm": 3543.0,
+      "temperatura": 67.1,
+      "accelX": 10.182,
+      "accelY": 0.726,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T03:50:13+00:00Z",
+      "rpm": 3407.0,
+      "temperatura": 68.8,
+      "accelX": 11.005,
+      "accelY": 0.95,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T03:52:01+00:00Z",
+      "rpm": 3495.0,
+      "temperatura": 69.8,
+      "accelX": 10.813,
+      "accelY": 0.909,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T03:55:01+00:00Z",
+      "rpm": 3484.0,
+      "temperatura": 71.2,
+      "accelX": 11.559,
+      "accelY": 0.707,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-22T03:56:49+00:00Z",
+      "rpm": 3492.0,
+      "temperatura": 72.5,
+      "accelX": 12.107,
+      "accelY": 0.911,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-22T03:58:55+00:00Z",
+      "rpm": 3402.0,
+      "temperatura": 73.8,
+      "accelX": 10.764,
+      "accelY": 0.805,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-22T04:35:15+00:00Z",
+      "rpm": 3468.0,
+      "temperatura": 34.0,
+      "accelX": 12.357,
+      "accelY": 0.643,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T04:42:06+00:00Z",
+      "rpm": 3549.0,
+      "temperatura": 41.2,
+      "accelX": 11.188,
+      "accelY": 0.738,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T04:47:54+00:00Z",
+      "rpm": 3482.0,
+      "temperatura": 46.3,
+      "accelX": 11.593,
+      "accelY": 0.598,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T04:53:03+00:00Z",
+      "rpm": 3503.0,
+      "temperatura": 50.5,
+      "accelX": 12.274,
+      "accelY": 0.702,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T04:57:12+00:00Z",
+      "rpm": 3478.0,
+      "temperatura": 53.8,
+      "accelX": 10.979,
+      "accelY": 0.577,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T05:01:48+00:00Z",
+      "rpm": 3500.0,
+      "temperatura": 56.7,
+      "accelX": 10.393,
+      "accelY": 0.62,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T05:04:33+00:00Z",
+      "rpm": 3486.0,
+      "temperatura": 58.4,
+      "accelX": 10.844,
+      "accelY": 0.466,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T05:07:06+00:00Z",
+      "rpm": 3493.0,
+      "temperatura": 59.9,
+      "accelX": 10.854,
+      "accelY": 0.45,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T05:12:51+00:00Z",
+      "rpm": 3457.0,
+      "temperatura": 62.9,
+      "accelX": 11.865,
+      "accelY": 0.682,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T05:17:24+00:00Z",
+      "rpm": 3519.0,
+      "temperatura": 65.5,
+      "accelX": 10.489,
+      "accelY": 0.573,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T05:20:54+00:00Z",
+      "rpm": 3441.0,
+      "temperatura": 67.3,
+      "accelX": 11.79,
+      "accelY": 0.685,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T05:22:48+00:00Z",
+      "rpm": 3462.0,
+      "temperatura": 67.9,
+      "accelX": 12.314,
+      "accelY": 1.046,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T05:24:42+00:00Z",
+      "rpm": 3326.0,
+      "temperatura": 69.0,
+      "accelX": 11.626,
+      "accelY": 0.979,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T05:27:09+00:00Z",
+      "rpm": 3509.0,
+      "temperatura": 70.3,
+      "accelX": 11.599,
+      "accelY": 0.818,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-22T05:30:30+00:00Z",
+      "rpm": 3429.0,
+      "temperatura": 71.8,
+      "accelX": 12.108,
+      "accelY": 0.908,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-22T05:32:12+00:00Z",
+      "rpm": 3395.0,
+      "temperatura": 72.3,
+      "accelX": 11.347,
+      "accelY": 0.863,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-22T05:34:12+00:00Z",
+      "rpm": 3485.0,
+      "temperatura": 73.3,
+      "accelX": 11.507,
+      "accelY": 0.747,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-22T05:37:30+00:00Z",
+      "rpm": 3517.0,
+      "temperatura": 74.7,
+      "accelX": 12.628,
+      "accelY": 0.765,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-22T06:05:20+00:00Z",
+      "rpm": 3525.0,
+      "temperatura": 20.3,
+      "accelX": 12.253,
+      "accelY": 0.697,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T06:11:29+00:00Z",
+      "rpm": 3471.0,
+      "temperatura": 29.6,
+      "accelX": 11.249,
+      "accelY": 0.703,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T06:17:11+00:00Z",
+      "rpm": 3465.0,
+      "temperatura": 36.6,
+      "accelX": 10.017,
+      "accelY": 0.521,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T06:21:56+00:00Z",
+      "rpm": 3441.0,
+      "temperatura": 42.1,
+      "accelX": 12.131,
+      "accelY": 0.681,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T06:25:08+00:00Z",
+      "rpm": 3383.0,
+      "temperatura": 45.3,
+      "accelX": 10.429,
+      "accelY": 0.783,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T06:27:20+00:00Z",
+      "rpm": 3417.0,
+      "temperatura": 47.4,
+      "accelX": 12.78,
+      "accelY": 0.6,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T06:31:47+00:00Z",
+      "rpm": 3441.0,
+      "temperatura": 51.4,
+      "accelX": 10.626,
+      "accelY": 0.744,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T06:36:56+00:00Z",
+      "rpm": 3444.0,
+      "temperatura": 55.6,
+      "accelX": 12.508,
+      "accelY": 0.646,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T06:40:14+00:00Z",
+      "rpm": 3510.0,
+      "temperatura": 57.9,
+      "accelX": 10.641,
+      "accelY": 0.619,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T06:45:17+00:00Z",
+      "rpm": 3436.0,
+      "temperatura": 61.2,
+      "accelX": 11.118,
+      "accelY": 0.572,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T06:46:59+00:00Z",
+      "rpm": 3503.0,
+      "temperatura": 62.2,
+      "accelX": 10.804,
+      "accelY": 0.648,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T06:50:20+00:00Z",
+      "rpm": 3472.0,
+      "temperatura": 64.6,
+      "accelX": 10.528,
+      "accelY": 0.961,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T06:53:47+00:00Z",
+      "rpm": 3547.0,
+      "temperatura": 66.9,
+      "accelX": 10.091,
+      "accelY": 0.825,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T06:56:29+00:00Z",
+      "rpm": 3467.0,
+      "temperatura": 68.6,
+      "accelX": 11.187,
+      "accelY": 0.898,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T06:58:29+00:00Z",
+      "rpm": 3452.0,
+      "temperatura": 69.7,
+      "accelX": 10.869,
+      "accelY": 0.76,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T07:02:56+00:00Z",
+      "rpm": 3449.0,
+      "temperatura": 72.3,
+      "accelX": 11.598,
+      "accelY": 0.943,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-22T07:05:26+00:00Z",
+      "rpm": 3557.0,
+      "temperatura": 73.4,
+      "accelX": 11.642,
+      "accelY": 0.97,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-22T07:07:20+00:00Z",
+      "rpm": 3482.0,
+      "temperatura": 74.3,
+      "accelX": 10.952,
+      "accelY": 0.587,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-22T07:34:29+00:00Z",
+      "rpm": 3455.0,
+      "temperatura": 20.6,
+      "accelX": 12.026,
+      "accelY": 0.476,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T07:39:41+00:00Z",
+      "rpm": 3476.0,
+      "temperatura": 30.0,
+      "accelX": 12.218,
+      "accelY": 0.583,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T07:43:23+00:00Z",
+      "rpm": 3526.0,
+      "temperatura": 35.2,
+      "accelX": 9.953,
+      "accelY": 0.638,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T07:47:29+00:00Z",
+      "rpm": 3430.0,
+      "temperatura": 40.0,
+      "accelX": 10.994,
+      "accelY": 0.656,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T07:51:32+00:00Z",
+      "rpm": 3460.0,
+      "temperatura": 44.9,
+      "accelX": 11.624,
+      "accelY": 0.584,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T07:54:38+00:00Z",
+      "rpm": 3480.0,
+      "temperatura": 47.8,
+      "accelX": 12.054,
+      "accelY": 0.568,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T08:00:29+00:00Z",
+      "rpm": 3521.0,
+      "temperatura": 53.3,
+      "accelX": 10.474,
+      "accelY": 0.611,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T08:05:02+00:00Z",
+      "rpm": 3508.0,
+      "temperatura": 57.6,
+      "accelX": 11.38,
+      "accelY": 0.633,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T08:07:29+00:00Z",
+      "rpm": 3519.0,
+      "temperatura": 59.2,
+      "accelX": 12.401,
+      "accelY": 0.589,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T08:11:26+00:00Z",
+      "rpm": 3494.0,
+      "temperatura": 62.5,
+      "accelX": 10.956,
+      "accelY": 0.589,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T08:13:26+00:00Z",
+      "rpm": 3428.0,
+      "temperatura": 63.3,
+      "accelX": 13.025,
+      "accelY": 0.948,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-22T08:15:44+00:00Z",
+      "rpm": 3441.0,
+      "temperatura": 65.0,
+      "accelX": 10.51,
+      "accelY": 0.809,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T08:19:29+00:00Z",
+      "rpm": 3428.0,
+      "temperatura": 67.9,
+      "accelX": 10.243,
+      "accelY": 0.717,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T08:24:08+00:00Z",
+      "rpm": 3421.0,
+      "temperatura": 70.4,
+      "accelX": 11.11,
+      "accelY": 0.997,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-22T08:26:50+00:00Z",
+      "rpm": 3474.0,
+      "temperatura": 72.1,
+      "accelX": 11.184,
+      "accelY": 0.864,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-22T08:28:26+00:00Z",
+      "rpm": 3465.0,
+      "temperatura": 73.1,
+      "accelX": 11.118,
+      "accelY": 0.851,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-22T09:02:36+00:00Z",
+      "rpm": 3484.0,
+      "temperatura": 23.5,
+      "accelX": 10.749,
+      "accelY": 0.609,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T09:07:21+00:00Z",
+      "rpm": 3515.0,
+      "temperatura": 30.6,
+      "accelX": 11.157,
+      "accelY": 0.642,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T09:13:33+00:00Z",
+      "rpm": 3443.0,
+      "temperatura": 38.2,
+      "accelX": 11.949,
+      "accelY": 0.422,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T09:19:42+00:00Z",
+      "rpm": 3466.0,
+      "temperatura": 44.7,
+      "accelX": 10.746,
+      "accelY": 0.666,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T09:26:21+00:00Z",
+      "rpm": 3547.0,
+      "temperatura": 51.0,
+      "accelX": 11.348,
+      "accelY": 0.624,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T09:30:12+00:00Z",
+      "rpm": 3517.0,
+      "temperatura": 54.3,
+      "accelX": 11.91,
+      "accelY": 0.652,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T09:34:24+00:00Z",
+      "rpm": 3494.0,
+      "temperatura": 57.1,
+      "accelX": 12.619,
+      "accelY": 0.582,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T09:37:15+00:00Z",
+      "rpm": 3503.0,
+      "temperatura": 59.4,
+      "accelX": 10.242,
+      "accelY": 0.771,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T09:39:27+00:00Z",
+      "rpm": 3526.0,
+      "temperatura": 60.5,
+      "accelX": 10.713,
+      "accelY": 0.685,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T09:43:15+00:00Z",
+      "rpm": 3433.0,
+      "temperatura": 63.6,
+      "accelX": 10.67,
+      "accelY": 0.752,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T09:47:09+00:00Z",
+      "rpm": 3352.0,
+      "temperatura": 66.0,
+      "accelX": 11.033,
+      "accelY": 0.977,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T09:51:03+00:00Z",
+      "rpm": 3423.0,
+      "temperatura": 68.2,
+      "accelX": 10.402,
+      "accelY": 0.968,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T09:55:33+00:00Z",
+      "rpm": 3412.0,
+      "temperatura": 71.0,
+      "accelX": 10.411,
+      "accelY": 0.983,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-22T09:57:15+00:00Z",
+      "rpm": 3493.0,
+      "temperatura": 71.6,
+      "accelX": 12.702,
+      "accelY": 0.94,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-22T10:00:15+00:00Z",
+      "rpm": 3438.0,
+      "temperatura": 73.6,
+      "accelX": 10.229,
+      "accelY": 0.927,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-22T10:33:47+00:00Z",
+      "rpm": 3504.0,
+      "temperatura": 34.2,
+      "accelX": 11.518,
+      "accelY": 0.675,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T10:41:26+00:00Z",
+      "rpm": 3496.0,
+      "temperatura": 44.0,
+      "accelX": 11.295,
+      "accelY": 0.667,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T10:44:59+00:00Z",
+      "rpm": 3511.0,
+      "temperatura": 47.9,
+      "accelX": 10.465,
+      "accelY": 0.591,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T10:48:56+00:00Z",
+      "rpm": 3514.0,
+      "temperatura": 52.3,
+      "accelX": 11.632,
+      "accelY": 0.448,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T10:54:29+00:00Z",
+      "rpm": 3467.0,
+      "temperatura": 56.6,
+      "accelX": 11.083,
+      "accelY": 0.513,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T10:57:17+00:00Z",
+      "rpm": 3495.0,
+      "temperatura": 59.2,
+      "accelX": 12.675,
+      "accelY": 0.461,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T11:00:23+00:00Z",
+      "rpm": 3491.0,
+      "temperatura": 62.1,
+      "accelX": 10.748,
+      "accelY": 0.683,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T11:04:41+00:00Z",
+      "rpm": 3476.0,
+      "temperatura": 64.5,
+      "accelX": 10.861,
+      "accelY": 0.587,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T11:06:44+00:00Z",
+      "rpm": 3446.0,
+      "temperatura": 65.8,
+      "accelX": 10.487,
+      "accelY": 0.893,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T11:12:11+00:00Z",
+      "rpm": 3444.0,
+      "temperatura": 69.9,
+      "accelX": 9.998,
+      "accelY": 0.773,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T11:14:47+00:00Z",
+      "rpm": 3510.0,
+      "temperatura": 71.1,
+      "accelX": 12.316,
+      "accelY": 0.873,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-22T11:19:53+00:00Z",
+      "rpm": 3438.0,
+      "temperatura": 74.4,
+      "accelX": 11.647,
+      "accelY": 0.981,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-22T11:55:39+00:00Z",
+      "rpm": 3453.0,
+      "temperatura": 31.4,
+      "accelX": 11.644,
+      "accelY": 0.597,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T12:02:36+00:00Z",
+      "rpm": 3412.0,
+      "temperatura": 41.2,
+      "accelX": 10.646,
+      "accelY": 0.662,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T12:06:06+00:00Z",
+      "rpm": 3473.0,
+      "temperatura": 45.6,
+      "accelX": 11.519,
+      "accelY": 0.483,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T12:10:45+00:00Z",
+      "rpm": 3501.0,
+      "temperatura": 50.8,
+      "accelX": 11.064,
+      "accelY": 0.7,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T12:14:48+00:00Z",
+      "rpm": 3485.0,
+      "temperatura": 54.4,
+      "accelX": 11.791,
+      "accelY": 0.755,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T12:18:33+00:00Z",
+      "rpm": 3470.0,
+      "temperatura": 58.4,
+      "accelX": 12.034,
+      "accelY": 0.528,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T12:21:06+00:00Z",
+      "rpm": 3450.0,
+      "temperatura": 59.9,
+      "accelX": 11.39,
+      "accelY": 0.659,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T12:24:15+00:00Z",
+      "rpm": 3440.0,
+      "temperatura": 62.3,
+      "accelX": 11.078,
+      "accelY": 0.575,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T12:27:18+00:00Z",
+      "rpm": 3472.0,
+      "temperatura": 64.7,
+      "accelX": 10.721,
+      "accelY": 0.607,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T12:30:48+00:00Z",
+      "rpm": 3516.0,
+      "temperatura": 67.0,
+      "accelX": 10.805,
+      "accelY": 0.99,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T12:33:33+00:00Z",
+      "rpm": 3476.0,
+      "temperatura": 68.4,
+      "accelX": 11.928,
+      "accelY": 0.693,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T12:34:39+00:00Z",
+      "rpm": 3437.0,
+      "temperatura": 69.8,
+      "accelX": 12.493,
+      "accelY": 1.031,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T12:37:24+00:00Z",
+      "rpm": 3439.0,
+      "temperatura": 70.7,
+      "accelX": 11.026,
+      "accelY": 0.657,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-22T12:40:21+00:00Z",
+      "rpm": 3512.0,
+      "temperatura": 72.7,
+      "accelX": 11.422,
+      "accelY": 0.964,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-22T12:44:33+00:00Z",
+      "rpm": 3397.0,
+      "temperatura": 75.3,
+      "accelX": 11.847,
+      "accelY": 1.027,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-22T13:14:37+00:00Z",
+      "rpm": 3433.0,
+      "temperatura": 19.7,
+      "accelX": 10.155,
+      "accelY": 0.665,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T13:19:10+00:00Z",
+      "rpm": 3496.0,
+      "temperatura": 26.9,
+      "accelX": 11.482,
+      "accelY": 0.603,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T13:25:46+00:00Z",
+      "rpm": 3446.0,
+      "temperatura": 35.3,
+      "accelX": 11.396,
+      "accelY": 0.523,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T13:28:28+00:00Z",
+      "rpm": 3432.0,
+      "temperatura": 38.2,
+      "accelX": 11.226,
+      "accelY": 0.641,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T13:33:43+00:00Z",
+      "rpm": 3460.0,
+      "temperatura": 43.3,
+      "accelX": 12.486,
+      "accelY": 0.601,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T13:37:28+00:00Z",
+      "rpm": 3464.0,
+      "temperatura": 46.9,
+      "accelX": 11.065,
+      "accelY": 0.673,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T13:44:10+00:00Z",
+      "rpm": 3488.0,
+      "temperatura": 52.6,
+      "accelX": 11.872,
+      "accelY": 0.579,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T13:52:31+00:00Z",
+      "rpm": 3515.0,
+      "temperatura": 58.6,
+      "accelX": 12.566,
+      "accelY": 0.488,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T13:55:55+00:00Z",
+      "rpm": 3457.0,
+      "temperatura": 61.3,
+      "accelX": 11.558,
+      "accelY": 0.749,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T14:01:16+00:00Z",
+      "rpm": 3456.0,
+      "temperatura": 63.7,
+      "accelX": 11.687,
+      "accelY": 0.702,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T14:03:13+00:00Z",
+      "rpm": 3398.0,
+      "temperatura": 65.3,
+      "accelX": 12.025,
+      "accelY": 0.754,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T14:05:49+00:00Z",
+      "rpm": 3496.0,
+      "temperatura": 67.1,
+      "accelX": 11.702,
+      "accelY": 0.932,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T14:09:13+00:00Z",
+      "rpm": 3445.0,
+      "temperatura": 68.8,
+      "accelX": 10.666,
+      "accelY": 1.006,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T14:12:40+00:00Z",
+      "rpm": 3465.0,
+      "temperatura": 70.7,
+      "accelX": 11.333,
+      "accelY": 1.158,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-22T14:14:19+00:00Z",
+      "rpm": 3427.0,
+      "temperatura": 71.5,
+      "accelX": 11.574,
+      "accelY": 1.127,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-22T14:16:37+00:00Z",
+      "rpm": 3490.0,
+      "temperatura": 72.6,
+      "accelX": 10.576,
+      "accelY": 0.863,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-22T14:19:13+00:00Z",
+      "rpm": 3508.0,
+      "temperatura": 74.3,
+      "accelX": 12.199,
+      "accelY": 0.737,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-22T14:21:10+00:00Z",
+      "rpm": 3450.0,
+      "temperatura": 74.7,
+      "accelX": 11.702,
+      "accelY": 1.016,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-22T14:49:03+00:00Z",
+      "rpm": 3516.0,
+      "temperatura": 25.0,
+      "accelX": 11.031,
+      "accelY": 0.526,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T14:55:00+00:00Z",
+      "rpm": 3475.0,
+      "temperatura": 33.7,
+      "accelX": 10.518,
+      "accelY": 0.657,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T15:04:15+00:00Z",
+      "rpm": 3432.0,
+      "temperatura": 44.7,
+      "accelX": 12.056,
+      "accelY": 0.753,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T15:10:39+00:00Z",
+      "rpm": 3495.0,
+      "temperatura": 50.6,
+      "accelX": 11.598,
+      "accelY": 0.662,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T15:17:09+00:00Z",
+      "rpm": 3497.0,
+      "temperatura": 56.0,
+      "accelX": 10.337,
+      "accelY": 0.571,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T15:19:39+00:00Z",
+      "rpm": 3489.0,
+      "temperatura": 58.0,
+      "accelX": 11.219,
+      "accelY": 0.391,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T15:23:42+00:00Z",
+      "rpm": 3476.0,
+      "temperatura": 60.5,
+      "accelX": 10.64,
+      "accelY": 0.65,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T15:25:45+00:00Z",
+      "rpm": 3471.0,
+      "temperatura": 61.9,
+      "accelX": 10.703,
+      "accelY": 0.527,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T15:28:30+00:00Z",
+      "rpm": 3546.0,
+      "temperatura": 63.3,
+      "accelX": 10.612,
+      "accelY": 0.585,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T15:32:00+00:00Z",
+      "rpm": 3507.0,
+      "temperatura": 65.0,
+      "accelX": 12.665,
+      "accelY": 0.882,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T15:35:21+00:00Z",
+      "rpm": 3496.0,
+      "temperatura": 67.3,
+      "accelX": 10.627,
+      "accelY": 0.813,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T15:37:48+00:00Z",
+      "rpm": 3396.0,
+      "temperatura": 68.8,
+      "accelX": 10.82,
+      "accelY": 0.959,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T15:40:48+00:00Z",
+      "rpm": 3405.0,
+      "temperatura": 70.2,
+      "accelX": 10.347,
+      "accelY": 0.684,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-22T15:44:39+00:00Z",
+      "rpm": 3504.0,
+      "temperatura": 72.1,
+      "accelX": 9.911,
+      "accelY": 0.909,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-22T15:45:54+00:00Z",
+      "rpm": 3473.0,
+      "temperatura": 72.7,
+      "accelX": 12.634,
+      "accelY": 0.528,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-22T15:48:39+00:00Z",
+      "rpm": 3478.0,
+      "temperatura": 74.4,
+      "accelX": 11.698,
+      "accelY": 0.708,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-22T16:20:53+00:00Z",
+      "rpm": 3476.0,
+      "temperatura": 34.9,
+      "accelX": 11.042,
+      "accelY": 0.683,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T16:26:20+00:00Z",
+      "rpm": 3477.0,
+      "temperatura": 43.1,
+      "accelX": 12.48,
+      "accelY": 0.682,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T16:30:11+00:00Z",
+      "rpm": 3483.0,
+      "temperatura": 47.7,
+      "accelX": 10.587,
+      "accelY": 0.663,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T16:33:53+00:00Z",
+      "rpm": 3543.0,
+      "temperatura": 52.2,
+      "accelX": 10.879,
+      "accelY": 0.517,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T16:38:29+00:00Z",
+      "rpm": 3522.0,
+      "temperatura": 56.7,
+      "accelX": 12.612,
+      "accelY": 0.581,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T16:42:29+00:00Z",
+      "rpm": 3485.0,
+      "temperatura": 60.0,
+      "accelX": 11.556,
+      "accelY": 0.702,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T16:45:20+00:00Z",
+      "rpm": 3504.0,
+      "temperatura": 62.6,
+      "accelX": 12.817,
+      "accelY": 0.624,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T16:48:20+00:00Z",
+      "rpm": 3481.0,
+      "temperatura": 64.5,
+      "accelX": 10.337,
+      "accelY": 0.679,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T16:51:20+00:00Z",
+      "rpm": 3507.0,
+      "temperatura": 67.3,
+      "accelX": 11.507,
+      "accelY": 0.99,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T16:55:44+00:00Z",
+      "rpm": 3456.0,
+      "temperatura": 70.3,
+      "accelX": 10.714,
+      "accelY": 0.988,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-22T16:57:50+00:00Z",
+      "rpm": 3361.0,
+      "temperatura": 71.8,
+      "accelX": 12.167,
+      "accelY": 0.879,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-22T17:33:23+00:00Z",
+      "rpm": 3465.0,
+      "temperatura": 33.9,
+      "accelX": 10.269,
+      "accelY": 0.686,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T17:40:32+00:00Z",
+      "rpm": 3469.0,
+      "temperatura": 44.0,
+      "accelX": 10.755,
+      "accelY": 0.648,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T17:43:53+00:00Z",
+      "rpm": 3476.0,
+      "temperatura": 47.6,
+      "accelX": 12.942,
+      "accelY": 0.562,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T17:46:53+00:00Z",
+      "rpm": 3466.0,
+      "temperatura": 50.9,
+      "accelX": 11.0,
+      "accelY": 0.705,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T17:52:53+00:00Z",
+      "rpm": 3508.0,
+      "temperatura": 56.9,
+      "accelX": 12.481,
+      "accelY": 0.564,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T17:55:35+00:00Z",
+      "rpm": 3470.0,
+      "temperatura": 58.7,
+      "accelX": 10.122,
+      "accelY": 0.549,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T17:58:44+00:00Z",
+      "rpm": 3515.0,
+      "temperatura": 61.3,
+      "accelX": 12.074,
+      "accelY": 0.613,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T18:00:53+00:00Z",
+      "rpm": 3474.0,
+      "temperatura": 63.3,
+      "accelX": 11.843,
+      "accelY": 0.675,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T18:04:32+00:00Z",
+      "rpm": 3533.0,
+      "temperatura": 65.9,
+      "accelX": 11.249,
+      "accelY": 0.473,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T18:08:14+00:00Z",
+      "rpm": 3440.0,
+      "temperatura": 68.5,
+      "accelX": 10.563,
+      "accelY": 0.854,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T18:11:02+00:00Z",
+      "rpm": 3467.0,
+      "temperatura": 70.2,
+      "accelX": 12.395,
+      "accelY": 1.05,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-22T18:14:47+00:00Z",
+      "rpm": 3477.0,
+      "temperatura": 72.5,
+      "accelX": 10.378,
+      "accelY": 0.96,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-22T18:16:38+00:00Z",
+      "rpm": 3518.0,
+      "temperatura": 73.9,
+      "accelX": 12.463,
+      "accelY": 1.073,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-22T18:20:44+00:00Z",
+      "rpm": 3447.0,
+      "temperatura": 75.8,
+      "accelX": 10.196,
+      "accelY": 1.03,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-22T18:53:53+00:00Z",
+      "rpm": 3485.0,
+      "temperatura": 29.1,
+      "accelX": 10.626,
+      "accelY": 0.684,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T18:56:26+00:00Z",
+      "rpm": 3471.0,
+      "temperatura": 32.7,
+      "accelX": 10.106,
+      "accelY": 0.848,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T19:01:05+00:00Z",
+      "rpm": 3470.0,
+      "temperatura": 38.2,
+      "accelX": 12.432,
+      "accelY": 0.748,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T19:05:35+00:00Z",
+      "rpm": 3561.0,
+      "temperatura": 43.1,
+      "accelX": 11.495,
+      "accelY": 0.775,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T19:08:47+00:00Z",
+      "rpm": 3429.0,
+      "temperatura": 45.8,
+      "accelX": 10.858,
+      "accelY": 0.644,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T19:18:11+00:00Z",
+      "rpm": 3525.0,
+      "temperatura": 53.6,
+      "accelX": 11.059,
+      "accelY": 0.733,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T19:21:38+00:00Z",
+      "rpm": 3409.0,
+      "temperatura": 56.1,
+      "accelX": 11.411,
+      "accelY": 0.586,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T19:30:32+00:00Z",
+      "rpm": 3490.0,
+      "temperatura": 61.8,
+      "accelX": 10.567,
+      "accelY": 0.606,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T19:34:23+00:00Z",
+      "rpm": 3518.0,
+      "temperatura": 64.1,
+      "accelX": 13.026,
+      "accelY": 0.524,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-22T19:38:05+00:00Z",
+      "rpm": 3454.0,
+      "temperatura": 66.6,
+      "accelX": 11.557,
+      "accelY": 0.88,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T19:40:26+00:00Z",
+      "rpm": 3435.0,
+      "temperatura": 67.8,
+      "accelX": 11.042,
+      "accelY": 0.839,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T19:43:41+00:00Z",
+      "rpm": 3540.0,
+      "temperatura": 68.8,
+      "accelX": 10.254,
+      "accelY": 0.915,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T19:45:05+00:00Z",
+      "rpm": 3549.0,
+      "temperatura": 70.1,
+      "accelX": 11.209,
+      "accelY": 0.923,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-22T19:47:47+00:00Z",
+      "rpm": 3422.0,
+      "temperatura": 71.6,
+      "accelX": 11.435,
+      "accelY": 1.11,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-22T19:50:23+00:00Z",
+      "rpm": 3488.0,
+      "temperatura": 72.4,
+      "accelX": 12.445,
+      "accelY": 0.959,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-22T19:53:23+00:00Z",
+      "rpm": 3490.0,
+      "temperatura": 73.9,
+      "accelX": 11.132,
+      "accelY": 0.814,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-22T20:27:49+00:00Z",
+      "rpm": 3534.0,
+      "temperatura": 26.0,
+      "accelX": 11.14,
+      "accelY": 0.652,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T20:31:25+00:00Z",
+      "rpm": 3505.0,
+      "temperatura": 31.0,
+      "accelX": 10.722,
+      "accelY": 0.657,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-22T20:37:01+00:00Z",
+      "rpm": 3421.0,
+      "temperatura": 37.5,
+      "accelX": 11.559,
+      "accelY": 0.493,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T20:43:58+00:00Z",
+      "rpm": 3489.0,
+      "temperatura": 43.9,
+      "accelX": 12.902,
+      "accelY": 0.527,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-22T20:48:43+00:00Z",
+      "rpm": 3470.0,
+      "temperatura": 48.4,
+      "accelX": 10.278,
+      "accelY": 0.481,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-23T15:42:53+00:00Z",
+      "rpm": 3482.0,
+      "temperatura": 69.8,
+      "accelX": 10.591,
+      "accelY": 1.294,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-23T15:47:44+00:00Z",
+      "rpm": 3483.0,
+      "temperatura": 73.7,
+      "accelX": 11.925,
+      "accelY": 0.275,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-23T16:03:35+00:00Z",
+      "rpm": 3490.0,
+      "temperatura": 57.6,
+      "accelX": 11.925,
+      "accelY": 0.824,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-23T16:43:18+00:00Z",
+      "rpm": 3498.0,
+      "temperatura": 37.9,
+      "accelX": 10.395,
+      "accelY": 1.138,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-23T16:50:22+00:00Z",
+      "rpm": 3491.0,
+      "temperatura": 55.9,
+      "accelX": 10.003,
+      "accelY": 1.294,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-23T16:56:11+00:00Z",
+      "rpm": 3489.0,
+      "temperatura": 68.1,
+      "accelX": 9.885,
+      "accelY": 0.196,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-23T17:24:32+00:00Z",
+      "rpm": 3497.0,
+      "temperatura": 46.9,
+      "accelX": 8.983,
+      "accelY": 0.941,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-23T17:33:41+00:00Z",
+      "rpm": 3487.0,
+      "temperatura": 65.8,
+      "accelX": 10.591,
+      "accelY": 0.235,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-23T17:36:37+00:00Z",
+      "rpm": 3484.0,
+      "temperatura": 70.1,
+      "accelX": 9.061,
+      "accelY": 0.118,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-23T18:01:51+00:00Z",
+      "rpm": 3493.0,
+      "temperatura": 53.7,
+      "accelX": 11.611,
+      "accelY": 0.275,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-23T18:09:41+00:00Z",
+      "rpm": 3484.0,
+      "temperatura": 68.3,
+      "accelX": 10.591,
+      "accelY": -0.431,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-23T18:42:42+00:00Z",
+      "rpm": 3491.0,
+      "temperatura": 49.6,
+      "accelX": 11.768,
+      "accelY": 1.451,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-23T18:50:27+00:00Z",
+      "rpm": 3488.0,
+      "temperatura": 65.8,
+      "accelX": 12.121,
+      "accelY": -0.51,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-23T19:01:08+00:00Z",
+      "rpm": 3485.0,
+      "temperatura": 73.9,
+      "accelX": 9.964,
+      "accelY": 0.235,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-23T19:06:43+00:00Z",
+      "rpm": 3483.0,
+      "temperatura": 75.5,
+      "accelX": 11.65,
+      "accelY": 0.863,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-23T19:14:59+00:00Z",
+      "rpm": 3481.0,
+      "temperatura": 77.1,
+      "accelX": 10.434,
+      "accelY": 0.824,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-23T19:53:58+00:00Z",
+      "rpm": 3492.0,
+      "temperatura": 59.8,
+      "accelX": 11.611,
+      "accelY": 1.373,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-23T20:00:30+00:00Z",
+      "rpm": 3488.0,
+      "temperatura": 69.8,
+      "accelX": 10.356,
+      "accelY": 0.941,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-23T20:04:12+00:00Z",
+      "rpm": 3485.0,
+      "temperatura": 73.4,
+      "accelX": 10.474,
+      "accelY": -0.667,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-24T08:50:43+00:00Z",
+      "rpm": 3504.0,
+      "temperatura": 28.9,
+      "accelX": 8.708,
+      "accelY": 0.549,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-24T08:53:41+00:00Z",
+      "rpm": 3499.0,
+      "temperatura": 42.9,
+      "accelX": 11.533,
+      "accelY": 0.667,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-24T08:57:40+00:00Z",
+      "rpm": 3492.0,
+      "temperatura": 55.8,
+      "accelX": 11.611,
+      "accelY": -1.608,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-24T09:00:55+00:00Z",
+      "rpm": 3491.0,
+      "temperatura": 62.9,
+      "accelX": 10.199,
+      "accelY": -0.078,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-24T09:03:21+00:00Z",
+      "rpm": 3486.0,
+      "temperatura": 67.0,
+      "accelX": 11.493,
+      "accelY": 1.922,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-24T09:47:32+00:00Z",
+      "rpm": 3497.0,
+      "temperatura": 38.7,
+      "accelX": 9.454,
+      "accelY": 1.687,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-24T09:49:37+00:00Z",
+      "rpm": 3494.0,
+      "temperatura": 45.6,
+      "accelX": 12.199,
+      "accelY": 0.981,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-24T09:55:14+00:00Z",
+      "rpm": 3490.0,
+      "temperatura": 59.1,
+      "accelX": 10.434,
+      "accelY": -0.628,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-24T10:02:15+00:00Z",
+      "rpm": 3485.0,
+      "temperatura": 68.1,
+      "accelX": 11.572,
+      "accelY": 1.02,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-24T10:06:23+00:00Z",
+      "rpm": 3485.0,
+      "temperatura": 71.0,
+      "accelX": 12.003,
+      "accelY": -0.353,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-24T10:12:19+00:00Z",
+      "rpm": 3485.0,
+      "temperatura": 72.7,
+      "accelX": 10.748,
+      "accelY": 0.471,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-24T10:15:02+00:00Z",
+      "rpm": 3484.0,
+      "temperatura": 73.5,
+      "accelX": 10.238,
+      "accelY": 0.588,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-24T10:32:54+00:00Z",
+      "rpm": 3487.0,
+      "temperatura": 54.4,
+      "accelX": 10.748,
+      "accelY": 0.157,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-24T10:36:56+00:00Z",
+      "rpm": 3490.0,
+      "temperatura": 62.1,
+      "accelX": 9.964,
+      "accelY": -0.078,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-24T10:42:48+00:00Z",
+      "rpm": 3484.0,
+      "temperatura": 68.3,
+      "accelX": 11.768,
+      "accelY": 0.549,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-24T11:13:46+00:00Z",
+      "rpm": 3498.0,
+      "temperatura": 33.9,
+      "accelX": 8.826,
+      "accelY": 0.353,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-24T11:25:53+00:00Z",
+      "rpm": 3485.0,
+      "temperatura": 63.3,
+      "accelX": 11.533,
+      "accelY": -0.314,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-24T11:31:40+00:00Z",
+      "rpm": 3482.0,
+      "temperatura": 68.3,
+      "accelX": 11.572,
+      "accelY": 0.196,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-24T11:33:55+00:00Z",
+      "rpm": 3483.0,
+      "temperatura": 69.5,
+      "accelX": 11.101,
+      "accelY": 1.059,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-24T11:39:51+00:00Z",
+      "rpm": 3480.0,
+      "temperatura": 71.7,
+      "accelX": 11.376,
+      "accelY": 1.059,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-24T11:47:08+00:00Z",
+      "rpm": 3483.0,
+      "temperatura": 72.7,
+      "accelX": 8.904,
+      "accelY": 0.275,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-24T12:41:14+00:00Z",
+      "rpm": 3499.0,
+      "temperatura": 32.6,
+      "accelX": 10.238,
+      "accelY": 1.373,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-24T12:44:53+00:00Z",
+      "rpm": 3495.0,
+      "temperatura": 46.8,
+      "accelX": 10.905,
+      "accelY": 0.667,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-24T12:50:45+00:00Z",
+      "rpm": 3491.0,
+      "temperatura": 60.1,
+      "accelX": 8.983,
+      "accelY": -0.039,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-24T12:56:30+00:00Z",
+      "rpm": 3487.0,
+      "temperatura": 66.8,
+      "accelX": 8.787,
+      "accelY": 0.824,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-24T13:00:17+00:00Z",
+      "rpm": 3484.0,
+      "temperatura": 69.6,
+      "accelX": 10.12,
+      "accelY": 2.354,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-24T13:24:54+00:00Z",
+      "rpm": 2421.0,
+      "temperatura": 52.2,
+      "accelX": 10.67,
+      "accelY": 1.177,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-24T13:28:52+00:00Z",
+      "rpm": 3493.0,
+      "temperatura": 52.7,
+      "accelX": 10.513,
+      "accelY": 0.667,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-24T13:32:46+00:00Z",
+      "rpm": 3492.0,
+      "temperatura": 62.2,
+      "accelX": 11.846,
+      "accelY": 0.902,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-24T13:37:28+00:00Z",
+      "rpm": 87.0,
+      "temperatura": 69.9,
+      "accelX": 10.12,
+      "accelY": 0.667,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-24T14:33:50+00:00Z",
+      "rpm": 3503.0,
+      "temperatura": 38.6,
+      "accelX": 9.964,
+      "accelY": 1.255,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-24T14:40:31+00:00Z",
+      "rpm": 3495.0,
+      "temperatura": 59.6,
+      "accelX": 10.63,
+      "accelY": -0.785,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-24T14:44:57+00:00Z",
+      "rpm": 3488.0,
+      "temperatura": 66.0,
+      "accelX": 11.925,
+      "accelY": -0.118,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-24T14:49:00+00:00Z",
+      "rpm": 3485.0,
+      "temperatura": 68.8,
+      "accelX": 9.336,
+      "accelY": -1.138,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-24T14:53:08+00:00Z",
+      "rpm": 3484.0,
+      "temperatura": 70.8,
+      "accelX": 12.317,
+      "accelY": -0.628,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-24T14:56:51+00:00Z",
+      "rpm": 3482.0,
+      "temperatura": 72.1,
+      "accelX": 9.924,
+      "accelY": 0.471,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-24T15:00:22+00:00Z",
+      "rpm": 3480.0,
+      "temperatura": 73.0,
+      "accelX": 12.082,
+      "accelY": 0.0,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-24T15:03:38+00:00Z",
+      "rpm": 3481.0,
+      "temperatura": 73.8,
+      "accelX": 9.885,
+      "accelY": 0.785,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-24T15:08:40+00:00Z",
+      "rpm": 3480.0,
+      "temperatura": 75.8,
+      "accelX": 9.493,
+      "accelY": 0.863,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-24T15:13:34+00:00Z",
+      "rpm": 3481.0,
+      "temperatura": 77.4,
+      "accelX": 9.571,
+      "accelY": 0.235,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-24T15:38:47+00:00Z",
+      "rpm": 3490.0,
+      "temperatura": 57.9,
+      "accelX": 11.533,
+      "accelY": -0.235,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-24T15:46:52+00:00Z",
+      "rpm": 3490.0,
+      "temperatura": 70.6,
+      "accelX": 9.061,
+      "accelY": 1.451,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-24T16:23:20+00:00Z",
+      "rpm": 3497.0,
+      "temperatura": 48.8,
+      "accelX": 12.199,
+      "accelY": 0.667,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-24T16:46:34+00:00Z",
+      "rpm": 3500.0,
+      "temperatura": 33.8,
+      "accelX": 8.983,
+      "accelY": 1.648,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-24T16:52:42+00:00Z",
+      "rpm": 3496.0,
+      "temperatura": 56.1,
+      "accelX": 10.67,
+      "accelY": 0.981,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-24T16:57:34+00:00Z",
+      "rpm": 3493.0,
+      "temperatura": 66.4,
+      "accelX": 11.65,
+      "accelY": 0.785,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-24T17:01:06+00:00Z",
+      "rpm": 3483.0,
+      "temperatura": 70.6,
+      "accelX": 11.415,
+      "accelY": 1.491,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-24T17:05:19+00:00Z",
+      "rpm": 3485.0,
+      "temperatura": 73.7,
+      "accelX": 9.728,
+      "accelY": 0.431,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-24T17:37:15+00:00Z",
+      "rpm": 3502.0,
+      "temperatura": 32.2,
+      "accelX": 12.003,
+      "accelY": 0.667,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-24T17:43:48+00:00Z",
+      "rpm": 3494.0,
+      "temperatura": 54.5,
+      "accelX": 11.729,
+      "accelY": 0.235,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-24T17:47:35+00:00Z",
+      "rpm": 3492.0,
+      "temperatura": 61.6,
+      "accelX": 10.513,
+      "accelY": 0.706,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-24T17:55:24+00:00Z",
+      "rpm": 3485.0,
+      "temperatura": 69.0,
+      "accelX": 10.748,
+      "accelY": 1.412,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-24T17:58:46+00:00Z",
+      "rpm": 3485.0,
+      "temperatura": 71.1,
+      "accelX": 11.533,
+      "accelY": 0.275,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-24T18:06:00+00:00Z",
+      "rpm": 3480.0,
+      "temperatura": 74.1,
+      "accelX": 11.886,
+      "accelY": 0.785,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-24T18:37:41+00:00Z",
+      "rpm": 3495.0,
+      "temperatura": 57.0,
+      "accelX": 10.395,
+      "accelY": -0.235,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-24T18:45:49+00:00Z",
+      "rpm": 3485.0,
+      "temperatura": 68.1,
+      "accelX": 8.198,
+      "accelY": 0.431,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-24T18:50:59+00:00Z",
+      "rpm": 3487.0,
+      "temperatura": 71.2,
+      "accelX": 10.787,
+      "accelY": 0.235,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-24T18:54:13+00:00Z",
+      "rpm": 3488.0,
+      "temperatura": 73.3,
+      "accelX": 10.003,
+      "accelY": 0.863,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-24T18:57:53+00:00Z",
+      "rpm": 3486.0,
+      "temperatura": 74.9,
+      "accelX": 11.572,
+      "accelY": 1.255,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-24T19:01:49+00:00Z",
+      "rpm": 3486.0,
+      "temperatura": 76.2,
+      "accelX": 11.376,
+      "accelY": 1.138,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-24T19:04:48+00:00Z",
+      "rpm": 3482.0,
+      "temperatura": 77.0,
+      "accelX": 11.964,
+      "accelY": 1.177,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-24T19:07:31+00:00Z",
+      "rpm": 3482.0,
+      "temperatura": 77.6,
+      "accelX": 11.493,
+      "accelY": -1.059,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-24T19:12:24+00:00Z",
+      "rpm": 3483.0,
+      "temperatura": 78.6,
+      "accelX": 10.356,
+      "accelY": 1.412,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-24T19:17:43+00:00Z",
+      "rpm": 3486.0,
+      "temperatura": 69.8,
+      "accelX": 10.591,
+      "accelY": 0.785,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-24T19:21:49+00:00Z",
+      "rpm": 3486.0,
+      "temperatura": 72.9,
+      "accelX": 11.768,
+      "accelY": 0.0,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-24T19:24:56+00:00Z",
+      "rpm": 3485.0,
+      "temperatura": 75.0,
+      "accelX": 9.336,
+      "accelY": -0.118,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-24T20:22:29+00:00Z",
+      "rpm": 3495.0,
+      "temperatura": 63.7,
+      "accelX": 11.729,
+      "accelY": 0.353,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-24T20:28:36+00:00Z",
+      "rpm": 3489.0,
+      "temperatura": 72.9,
+      "accelX": 11.18,
+      "accelY": 0.039,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-25T08:32:01+00:00Z",
+      "rpm": 3503.0,
+      "temperatura": 42.1,
+      "accelX": 11.572,
+      "accelY": 0.745,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-25T08:39:50+00:00Z",
+      "rpm": 3493.0,
+      "temperatura": 64.3,
+      "accelX": 12.592,
+      "accelY": -0.549,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-25T08:43:40+00:00Z",
+      "rpm": 3489.0,
+      "temperatura": 69.9,
+      "accelX": 11.533,
+      "accelY": -0.431,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-25T08:49:01+00:00Z",
+      "rpm": 3486.0,
+      "temperatura": 75.1,
+      "accelX": 8.748,
+      "accelY": -0.471,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-25T12:57:29+00:00Z",
+      "rpm": 3507.0,
+      "temperatura": 28.7,
+      "accelX": 9.611,
+      "accelY": 0.392,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-25T13:03:32+00:00Z",
+      "rpm": 3498.0,
+      "temperatura": 54.1,
+      "accelX": 9.14,
+      "accelY": -0.353,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-25T13:08:50+00:00Z",
+      "rpm": 3493.0,
+      "temperatura": 66.9,
+      "accelX": 10.434,
+      "accelY": 0.863,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-25T13:12:18+00:00Z",
+      "rpm": 3488.0,
+      "temperatura": 71.9,
+      "accelX": 9.336,
+      "accelY": 0.51,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-25T13:14:33+00:00Z",
+      "rpm": 3489.0,
+      "temperatura": 74.2,
+      "accelX": 9.022,
+      "accelY": 0.588,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-25T14:53:20+00:00Z",
+      "rpm": 3503.0,
+      "temperatura": 28.1,
+      "accelX": 10.16,
+      "accelY": -0.471,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-25T15:06:26+00:00Z",
+      "rpm": 3491.0,
+      "temperatura": 65.6,
+      "accelX": 9.336,
+      "accelY": -0.275,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-25T15:10:24+00:00Z",
+      "rpm": 3485.0,
+      "temperatura": 71.4,
+      "accelX": 12.239,
+      "accelY": -0.628,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-25T15:41:26+00:00Z",
+      "rpm": 3495.0,
+      "temperatura": 48.3,
+      "accelX": 11.533,
+      "accelY": 0.824,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-25T15:48:56+00:00Z",
+      "rpm": 3488.0,
+      "temperatura": 67.1,
+      "accelX": 9.14,
+      "accelY": 0.785,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-25T15:51:49+00:00Z",
+      "rpm": 3489.0,
+      "temperatura": 71.2,
+      "accelX": 10.513,
+      "accelY": 0.157,
+      "estado": "Alerta_Temp"
+    },
+    {
+      "timestamp": "2026-09-25T16:22:39+00:00Z",
+      "rpm": 3498.0,
+      "temperatura": 50.4,
+      "accelX": 8.708,
+      "accelY": 1.098,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-25T16:28:37+00:00Z",
+      "rpm": 3491.0,
+      "temperatura": 66.9,
+      "accelX": 10.513,
+      "accelY": 2.079,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-25T16:31:24+00:00Z",
+      "rpm": 3490.0,
+      "temperatura": 71.6,
+      "accelX": 12.474,
+      "accelY": -0.078,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-25T16:58:13+00:00Z",
+      "rpm": 3501.0,
+      "temperatura": 38.0,
+      "accelX": 12.043,
+      "accelY": 0.51,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-25T17:09:26+00:00Z",
+      "rpm": 3489.0,
+      "temperatura": 67.4,
+      "accelX": 10.16,
+      "accelY": -0.196,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-25T17:16:09+00:00Z",
+      "rpm": 3486.0,
+      "temperatura": 73.3,
+      "accelX": 11.533,
+      "accelY": 0.353,
+      "estado": "Alerta_Critica"
+    },
+    {
+      "timestamp": "2026-09-25T17:52:00+00:00Z",
+      "rpm": 3496.0,
+      "temperatura": 54.0,
+      "accelX": 12.121,
+      "accelY": -0.51,
+      "estado": "Alerta_AccelX"
+    },
+    {
+      "timestamp": "2026-09-25T18:02:55+00:00Z",
+      "rpm": 3489.0,
+      "temperatura": 69.6,
+      "accelX": 9.14,
+      "accelY": 1.334,
+      "estado": "Normal"
+    },
+    {
+      "timestamp": "2026-09-25T18:05:53+00:00Z",
+      "rpm": 3486.0,
+      "temperatura": 72.1,
+      "accelX": 11.14,
+      "accelY": 0.628,
+      "estado": "Alerta_Temp"
+    }
+  ],
+  "estado_operativo": "Fuera de Rango"
+}

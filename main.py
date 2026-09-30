@@ -1,12 +1,3 @@
-"""
-===========================================================
-INTERFAZ GRÁFICA - PROCESADOR DE VIBRACIONES v3.2
-===========================================================
-Layout mejorado de 2 columnas para pantalla completa.
-- Columna izquierda: Controles
-- Columna derecha: Consola (más grande y visible)
-"""
-
 import customtkinter as ctk
 from tkinter import filedialog, messagebox
 from tkcalendar import DateEntry
@@ -15,9 +6,9 @@ import os
 import threading
 
 from procesador import (
-    leer_csv,
-    convertir_csv_a_json,
-    generar_json_sintetico
+    csv_a_json_basico,
+    json_basico_a_analisis,
+    json_basico_a_sinteticos
 )
 
 
@@ -25,648 +16,488 @@ ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("blue")
 
 
-# ============================================================
-# COLORES PERSONALIZADOS
-# ============================================================
-
-COLOR_PRIMARIO = "#1f6aa5"      # Azul para convertir
+COLOR_PRIMARIO = "#1f6aa5"
 COLOR_PRIMARIO_HOVER = "#144870"
-COLOR_EXITO = "#2d7a3e"          # Verde para sintéticos
+COLOR_EXITO = "#2d7a3e"
 COLOR_EXITO_HOVER = "#1e5429"
-COLOR_FONDO_FRAME = "#2b2b2b"    # Fondo de frames
-COLOR_FONDO_SECCION = "#3a3a3a"  # Fondo de secciones internas
-COLOR_TEXTO_INFO = "#4a9eff"     # Azul claro para info
-COLOR_TEXTO_EXITO = "#4ade80"    # Verde claro para éxito
-COLOR_TEXTO_ERROR = "#f87171"    # Rojo claro para errores
-COLOR_TEXTO_WARN = "#fbbf24"     # Amarillo para advertencias
+COLOR_ANALISIS = "#7c3aed"
+COLOR_ANALISIS_HOVER = "#5b21b6"
+COLOR_FONDO = "#2b2b2b"
+COLOR_SECCION = "#3a3a3a"
+COLOR_INFO = "#4a9eff"
+COLOR_OK = "#4ade80"
+COLOR_ERROR = "#f87171"
+COLOR_WARN = "#fbbf24"
 
 
 class App(ctk.CTk):
     def __init__(self):
         super().__init__()
-        
         self.title("Procesador de Vibraciones - ESP32")
         
-        # Pantalla completa
         try:
             self.state('zoomed')
         except:
             try:
                 self.attributes('-zoomed', True)
             except:
-                ancho = self.winfo_screenwidth()
-                alto = self.winfo_screenheight()
-                self.geometry(f"{ancho}x{alto}+0+0")
+                self.geometry(f"{self.winfo_screenwidth()}x{self.winfo_screenheight()}+0+0")
         
         self.resizable(True, True)
-        self.minsize(1200, 700)
+        self.minsize(1100, 700)
         
-        self.archivo_csv_seleccionado = None
-        self.carpeta_salida = None
+        self.csv_seleccionado = None
+        self.json_basico_analisis = None
+        self.json_basico_sinteticos = None
+        self.carpeta_salida_1 = None
+        self.carpeta_salida_2 = None
+        self.carpeta_salida_3 = None
         
         self.crear_widgets()
-        
-        # Atajos de teclado
-        self.bind('<F11>', self.toggle_fullscreen)
-        self.bind('<Escape>', self.salir_fullscreen)
-        self.es_fullscreen = False
+        self.bind('<F11>', lambda e: self.attributes('-fullscreen',
+                  not self.attributes('-fullscreen')))
+        self.bind('<Escape>', lambda e: self.attributes('-fullscreen', False))
     
-    
-    def toggle_fullscreen(self, event=None):
-        self.es_fullscreen = not self.es_fullscreen
-        self.attributes('-fullscreen', self.es_fullscreen)
-    
-    
-    def salir_fullscreen(self, event=None):
-        if self.es_fullscreen:
-            self.attributes('-fullscreen', False)
-            self.es_fullscreen = False
-    
-    
-    # ============================================================
-    # CREAR WIDGETS PRINCIPALES
-    # ============================================================
     
     def crear_widgets(self):
-        # ============================================
-        # GRID PRINCIPAL - 2 COLUMNAS
-        # ============================================
         self.grid_rowconfigure(0, weight=1)
-        self.grid_columnconfigure(0, weight=0, minsize=550)  # Columna controles (ancho fijo)
-        self.grid_columnconfigure(1, weight=1)               # Columna consola (expandible)
+        self.grid_columnconfigure(0, weight=7)
+        self.grid_columnconfigure(1, weight=3)
         
-        # ============================================
-        # COLUMNA IZQUIERDA - CONTROLES
-        # ============================================
-        self.frame_izq = ctk.CTkFrame(self, fg_color=COLOR_FONDO_FRAME)
-        self.frame_izq.grid(row=0, column=0, sticky="nsew", padx=(15, 8), pady=15)
-        
-        self.frame_izq.grid_rowconfigure(0, weight=0)  # Título
-        self.frame_izq.grid_rowconfigure(1, weight=1)  # Scroll
+        self.frame_izq = ctk.CTkFrame(self, fg_color=COLOR_FONDO)
+        self.frame_izq.grid(row=0, column=0, sticky="nsew", padx=(10, 5), pady=10)
+        self.frame_izq.grid_rowconfigure(1, weight=1)
         self.frame_izq.grid_columnconfigure(0, weight=1)
         
-        # Título izquierdo
-        self.crear_titulo_izquierdo()
+        t = ctk.CTkFrame(self.frame_izq, fg_color=COLOR_PRIMARIO, corner_radius=8)
+        t.grid(row=0, column=0, sticky="ew", padx=8, pady=(8, 4))
+        ctk.CTkLabel(t, text="PANEL DE CONTROL",
+                    font=ctk.CTkFont(size=18, weight="bold"),
+                    text_color="white").pack(pady=12)
         
-        # Frame con scroll para controles
-        self.frame_scroll = ctk.CTkScrollableFrame(
-            self.frame_izq,
-            fg_color="transparent"
-        )
-        self.frame_scroll.grid(row=1, column=0, sticky="nsew", padx=10, pady=(0, 10))
+        self.scroll = ctk.CTkScrollableFrame(self.frame_izq, fg_color="transparent")
+        self.scroll.grid(row=1, column=0, sticky="nsew", padx=8, pady=(0, 8))
         
-        # Secciones de control
-        self.crear_seccion_archivo()
-        self.crear_seccion_carpeta()
-        self.crear_seccion_acciones()
-        self.crear_seccion_config_sinteticos()
+        self.crear_apartado_1()
+        self.crear_apartado_2()
+        self.crear_apartado_3()
         
-        # ============================================
-        # COLUMNA DERECHA - CONSOLA
-        # ============================================
-        self.frame_der = ctk.CTkFrame(self, fg_color=COLOR_FONDO_FRAME)
-        self.frame_der.grid(row=0, column=1, sticky="nsew", padx=(8, 15), pady=15)
-        
-        self.frame_der.grid_rowconfigure(1, weight=1)  # Consola expandible
+        self.frame_der = ctk.CTkFrame(self, fg_color=COLOR_FONDO)
+        self.frame_der.grid(row=0, column=1, sticky="nsew", padx=(5, 10), pady=10)
+        self.frame_der.grid_rowconfigure(1, weight=1)
         self.frame_der.grid_columnconfigure(0, weight=1)
         
         self.crear_consola()
     
     
-    # ============================================================
-    # TÍTULO IZQUIERDO
-    # ============================================================
-    
-    def crear_titulo_izquierdo(self):
-        frame_titulo = ctk.CTkFrame(self.frame_izq, fg_color=COLOR_PRIMARIO, corner_radius=8)
-        frame_titulo.grid(row=0, column=0, sticky="ew", padx=10, pady=(10, 5))
+    def crear_apartado_1(self):
+        frame = ctk.CTkFrame(self.scroll, fg_color=COLOR_SECCION, corner_radius=10)
+        frame.pack(fill="x", pady=6, padx=4)
         
-        ctk.CTkLabel(
-            frame_titulo,
-            text="⚙️  PANEL DE CONTROL",
-            font=ctk.CTkFont(size=20, weight="bold"),
-            text_color="white"
-        ).pack(pady=15, padx=20)
-    
-    
-    # ============================================================
-    # SECCIONES DE LA COLUMNA IZQUIERDA
-    # ============================================================
-    
-    def crear_seccion_archivo(self):
-        """Sección 1: Seleccionar archivo CSV."""
-        frame = ctk.CTkFrame(self.frame_scroll, fg_color=COLOR_FONDO_SECCION, corner_radius=10)
-        frame.pack(fill="x", pady=(5, 10), padx=5)
+        head = ctk.CTkFrame(frame, fg_color=COLOR_PRIMARIO, corner_radius=8)
+        head.pack(fill="x", padx=8, pady=(8, 6))
+        ctk.CTkLabel(head, text="1. GENERADOR DE JSON BÁSICO",
+                    font=ctk.CTkFont(size=14, weight="bold"),
+                    text_color="white").pack(pady=8, padx=12, anchor="w")
         
-        # Título sección
-        ctk.CTkLabel(
-            frame,
-            text="📁  Archivo CSV",
-            font=ctk.CTkFont(size=15, weight="bold"),
-            text_color="white"
-        ).pack(anchor="w", padx=15, pady=(12, 8))
+        f1 = ctk.CTkFrame(frame, fg_color="transparent")
+        f1.pack(fill="x", padx=12, pady=3)
+        ctk.CTkButton(f1, text="Seleccionar CSV",
+                     command=self.sel_csv,
+                     width=200, height=34,
+                     font=ctk.CTkFont(size=12, weight="bold"),
+                     fg_color=COLOR_PRIMARIO, hover_color=COLOR_PRIMARIO_HOVER
+                     ).pack(side="left")
+        self.lbl_csv = ctk.CTkLabel(f1, text="Sin archivo",
+                                    text_color="gray", font=ctk.CTkFont(size=10),
+                                    anchor="w", wraplength=350)
+        self.lbl_csv.pack(side="left", padx=8, fill="x", expand=True)
         
-        # Botón
-        ctk.CTkButton(
-            frame,
-            text="📂  Seleccionar archivo",
-            command=self.seleccionar_archivo,
-            width=250,
-            height=40,
-            font=ctk.CTkFont(size=13, weight="bold"),
-            fg_color=COLOR_PRIMARIO,
-            hover_color=COLOR_PRIMARIO_HOVER
-        ).pack(padx=15, pady=(0, 8))
+        f2 = ctk.CTkFrame(frame, fg_color="transparent")
+        f2.pack(fill="x", padx=12, pady=3)
+        ctk.CTkButton(f2, text="Carpeta salida",
+                     command=lambda: self.sel_carpeta(1),
+                     width=200, height=34,
+                     font=ctk.CTkFont(size=12, weight="bold"),
+                     fg_color=COLOR_PRIMARIO, hover_color=COLOR_PRIMARIO_HOVER
+                     ).pack(side="left")
+        self.lbl_carpeta_1 = ctk.CTkLabel(f2, text="Sin carpeta",
+                                          text_color="gray", font=ctk.CTkFont(size=10),
+                                          anchor="w", wraplength=350)
+        self.lbl_carpeta_1.pack(side="left", padx=8, fill="x", expand=True)
         
-        # Label de archivo seleccionado
-        self.lbl_archivo = ctk.CTkLabel(
-            frame,
-            text="⚠️ Ningún archivo seleccionado",
-            text_color="gray",
-            font=ctk.CTkFont(size=11),
-            wraplength=450,
-            justify="left",
-            anchor="w"
-        )
-        self.lbl_archivo.pack(fill="x", padx=15, pady=(0, 12))
+        self.btn_1 = ctk.CTkButton(frame, text="Generar JSON Básico",
+                                   command=self.accion_1,
+                                   width=380, height=40,
+                                   font=ctk.CTkFont(size=13, weight="bold"),
+                                   fg_color=COLOR_PRIMARIO,
+                                   hover_color=COLOR_PRIMARIO_HOVER)
+        self.btn_1.pack(padx=12, pady=(6, 12))
     
     
-    def crear_seccion_carpeta(self):
-        """Sección 2: Carpeta de salida."""
-        frame = ctk.CTkFrame(self.frame_scroll, fg_color=COLOR_FONDO_SECCION, corner_radius=10)
-        frame.pack(fill="x", pady=(5, 10), padx=5)
+    def crear_apartado_2(self):
+        frame = ctk.CTkFrame(self.scroll, fg_color=COLOR_SECCION, corner_radius=10)
+        frame.pack(fill="x", pady=6, padx=4)
         
-        ctk.CTkLabel(
-            frame,
-            text="📁  Carpeta de salida",
-            font=ctk.CTkFont(size=15, weight="bold"),
-            text_color="white"
-        ).pack(anchor="w", padx=15, pady=(12, 8))
+        head = ctk.CTkFrame(frame, fg_color=COLOR_ANALISIS, corner_radius=8)
+        head.pack(fill="x", padx=8, pady=(8, 6))
+        ctk.CTkLabel(head, text="2. GENERADOR DE JSON DE ANÁLISIS",
+                    font=ctk.CTkFont(size=14, weight="bold"),
+                    text_color="white").pack(pady=8, padx=12, anchor="w")
         
-        ctk.CTkButton(
-            frame,
-            text="📂  Seleccionar carpeta",
-            command=self.seleccionar_carpeta,
-            width=250,
-            height=40,
-            font=ctk.CTkFont(size=13, weight="bold"),
-            fg_color=COLOR_PRIMARIO,
-            hover_color=COLOR_PRIMARIO_HOVER
-        ).pack(padx=15, pady=(0, 8))
+        f1 = ctk.CTkFrame(frame, fg_color="transparent")
+        f1.pack(fill="x", padx=12, pady=3)
+        ctk.CTkButton(f1, text="Seleccionar JSON básico",
+                     command=self.sel_json_analisis,
+                     width=200, height=34,
+                     font=ctk.CTkFont(size=12, weight="bold"),
+                     fg_color=COLOR_ANALISIS, hover_color=COLOR_ANALISIS_HOVER
+                     ).pack(side="left")
+        self.lbl_json_analisis = ctk.CTkLabel(f1, text="Sin archivo",
+                                              text_color="gray", font=ctk.CTkFont(size=10),
+                                              anchor="w", wraplength=350)
+        self.lbl_json_analisis.pack(side="left", padx=8, fill="x", expand=True)
         
-        self.lbl_carpeta = ctk.CTkLabel(
-            frame,
-            text="⚠️ Ninguna carpeta seleccionada",
-            text_color="gray",
-            font=ctk.CTkFont(size=11),
-            wraplength=450,
-            justify="left",
-            anchor="w"
-        )
-        self.lbl_carpeta.pack(fill="x", padx=15, pady=(0, 12))
+        f2 = ctk.CTkFrame(frame, fg_color="transparent")
+        f2.pack(fill="x", padx=12, pady=3)
+        ctk.CTkButton(f2, text="Carpeta salida",
+                     command=lambda: self.sel_carpeta(2),
+                     width=200, height=34,
+                     font=ctk.CTkFont(size=12, weight="bold"),
+                     fg_color=COLOR_ANALISIS, hover_color=COLOR_ANALISIS_HOVER
+                     ).pack(side="left")
+        self.lbl_carpeta_2 = ctk.CTkLabel(f2, text="Sin carpeta",
+                                          text_color="gray", font=ctk.CTkFont(size=10),
+                                          anchor="w", wraplength=350)
+        self.lbl_carpeta_2.pack(side="left", padx=8, fill="x", expand=True)
+        
+        self.btn_2 = ctk.CTkButton(frame, text="Generar Análisis",
+                                   command=self.accion_2,
+                                   width=380, height=40,
+                                   font=ctk.CTkFont(size=13, weight="bold"),
+                                   fg_color=COLOR_ANALISIS,
+                                   hover_color=COLOR_ANALISIS_HOVER)
+        self.btn_2.pack(padx=12, pady=(6, 12))
     
     
-    def crear_seccion_acciones(self):
-        """Sección 3: Botones de acción principales."""
-        frame = ctk.CTkFrame(self.frame_scroll, fg_color=COLOR_FONDO_SECCION, corner_radius=10)
-        frame.pack(fill="x", pady=(5, 10), padx=5)
+    def crear_apartado_3(self):
+        frame = ctk.CTkFrame(self.scroll, fg_color=COLOR_SECCION, corner_radius=10)
+        frame.pack(fill="x", pady=6, padx=4)
         
-        ctk.CTkLabel(
-            frame,
-            text="⚙️  Operación",
-            font=ctk.CTkFont(size=15, weight="bold"),
-            text_color="white"
-        ).pack(anchor="w", padx=15, pady=(12, 8))
+        head = ctk.CTkFrame(frame, fg_color=COLOR_EXITO, corner_radius=8)
+        head.pack(fill="x", padx=8, pady=(8, 6))
+        ctk.CTkLabel(head, text="3. GENERADOR DE SINTÉTICOS",
+                    font=ctk.CTkFont(size=14, weight="bold"),
+                    text_color="white").pack(pady=8, padx=12, anchor="w")
         
-        # Botón: Convertir
-        self.btn_convertir = ctk.CTkButton(
-            frame,
-            text="Convertir CSV → JSON",
-            command=self.convertir_a_json,
-            width=350,
-            height=50,
-            font=ctk.CTkFont(size=14, weight="bold"),
-            fg_color=COLOR_PRIMARIO,
-            hover_color=COLOR_PRIMARIO_HOVER,
-            corner_radius=8
-        )
-        self.btn_convertir.pack(padx=15, pady=(0, 8))
+        f1 = ctk.CTkFrame(frame, fg_color="transparent")
+        f1.pack(fill="x", padx=12, pady=3)
+        ctk.CTkButton(f1, text="Seleccionar JSON básico",
+                     command=self.sel_json_sinteticos,
+                     width=200, height=34,
+                     font=ctk.CTkFont(size=12, weight="bold"),
+                     fg_color=COLOR_EXITO, hover_color=COLOR_EXITO_HOVER
+                     ).pack(side="left")
+        self.lbl_json_sint = ctk.CTkLabel(f1, text="Sin archivo",
+                                          text_color="gray", font=ctk.CTkFont(size=10),
+                                          anchor="w", wraplength=350)
+        self.lbl_json_sint.pack(side="left", padx=8, fill="x", expand=True)
         
-        # Botón: Sintéticos
-        self.btn_sinteticos = ctk.CTkButton(
-            frame,
-            text="Generar Datos Sintéticos",
-            command=self.generar_sinteticos,
-            width=350,
-            height=50,
-            font=ctk.CTkFont(size=14, weight="bold"),
-            fg_color=COLOR_EXITO,
-            hover_color=COLOR_EXITO_HOVER,
-            corner_radius=8
-        )
-        self.btn_sinteticos.pack(padx=15, pady=(0, 12))
+        f2 = ctk.CTkFrame(frame, fg_color="transparent")
+        f2.pack(fill="x", padx=12, pady=3)
+        ctk.CTkButton(f2, text="Carpeta salida",
+                     command=lambda: self.sel_carpeta(3),
+                     width=200, height=34,
+                     font=ctk.CTkFont(size=12, weight="bold"),
+                     fg_color=COLOR_EXITO, hover_color=COLOR_EXITO_HOVER
+                     ).pack(side="left")
+        self.lbl_carpeta_3 = ctk.CTkLabel(f2, text="Sin carpeta",
+                                          text_color="gray", font=ctk.CTkFont(size=10),
+                                          anchor="w", wraplength=350)
+        self.lbl_carpeta_3.pack(side="left", padx=8, fill="x", expand=True)
+        
+        self.crear_campo_fecha(frame, "Fecha inicio:", "date_inicio")
+        self.crear_campo_texto(frame, "Hora inicio:", "entry_hora_ini", "08:00:00")
+        self.crear_campo_texto(frame, "Hora fin:", "entry_hora_fin", "18:00:00")
+        self.crear_campo_texto(frame, "Días:", "entry_dias", "7")
+        self.crear_campo_texto(frame, "Intervalo (s):", "entry_intervalo", "3")
+        
+        self.btn_3 = ctk.CTkButton(frame, text="Generar Sintéticos",
+                                   command=self.accion_3,
+                                   width=380, height=40,
+                                   font=ctk.CTkFont(size=13, weight="bold"),
+                                   fg_color=COLOR_EXITO,
+                                   hover_color=COLOR_EXITO_HOVER)
+        self.btn_3.pack(padx=12, pady=(6, 12))
     
     
-    def crear_seccion_config_sinteticos(self):
-        """Sección 4: Configuración de datos sintéticos."""
-        frame = ctk.CTkFrame(self.frame_scroll, fg_color=COLOR_FONDO_SECCION, corner_radius=10)
-        frame.pack(fill="x", pady=(5, 10), padx=5)
-        
-        ctk.CTkLabel(
-            frame,
-            text="Configuración de sintéticos",
-            font=ctk.CTkFont(size=15, weight="bold"),
-            text_color="white"
-        ).pack(anchor="w", padx=15, pady=(12, 8))
-        
-        # --- Fecha inicio ---
-        self.crear_campo_fecha(frame, "📅  Fecha de inicio:", "date_inicio")
-        
-        # --- Hora inicio ---
-        self.crear_campo_texto(frame, "🕐  Hora inicio:", "entry_hora_ini", "08:00:00")
-        
-        # --- Hora fin ---
-        self.crear_campo_texto(frame, "🕐  Hora fin:", "entry_hora_fin", "18:00:00")
-        
-        # --- Días ---
-        self.crear_campo_texto(frame, "📆  Días consecutivos:", "entry_dias", "7")
-        
-        # --- Intervalo ---
-        self.crear_campo_texto(frame, "⏱️  Intervalo (seg):", "entry_intervalo", "3")
-        
-        # --- Preview ---
-        frame_preview = ctk.CTkFrame(frame, fg_color="#1a1a1a", corner_radius=6)
-        frame_preview.pack(fill="x", padx=15, pady=(5, 12))
-        
-        self.lbl_preview = ctk.CTkLabel(
-            frame_preview,
-            text="Vista previa: calculando...",
-            font=ctk.CTkFont(size=11),
-            text_color=COLOR_TEXTO_INFO,
-            wraplength=400,
-            justify="left",
-            anchor="w"
-        )
-        self.lbl_preview.pack(fill="x", padx=12, pady=10)
-        
-        # Actualizar preview
-        self.entry_dias.bind('<KeyRelease>', self.actualizar_preview)
-        self.entry_intervalo.bind('<KeyRelease>', self.actualizar_preview)
-        self.entry_hora_ini.bind('<KeyRelease>', self.actualizar_preview)
-        self.entry_hora_fin.bind('<KeyRelease>', self.actualizar_preview)
-        
-        self.actualizar_preview()
+    def crear_campo_fecha(self, parent, label, attr):
+        f = ctk.CTkFrame(parent, fg_color="transparent")
+        f.pack(fill="x", padx=12, pady=2)
+        ctk.CTkLabel(f, text=label, font=ctk.CTkFont(size=10),
+                    width=120, anchor="w").pack(side="left")
+        w = DateEntry(f, width=11, background='darkblue', foreground='white',
+                     borderwidth=2, date_pattern='yyyy-mm-dd', font=('Arial', 10))
+        w.pack(side="left", padx=4)
+        w.set_date(datetime.now())
+        setattr(self, attr, w)
     
     
-    def crear_campo_fecha(self, parent, label_text, attr_name):
-        """Crea un campo de fecha con calendario."""
-        frame = ctk.CTkFrame(parent, fg_color="transparent")
-        frame.pack(fill="x", padx=15, pady=4)
-        
-        ctk.CTkLabel(
-            frame,
-            text=label_text,
-            font=ctk.CTkFont(size=12),
-            width=180,
-            anchor="w"
-        ).pack(side="left")
-        
-        widget = DateEntry(
-            frame,
-            width=12,
-            background='darkblue',
-            foreground='white',
-            borderwidth=2,
-            date_pattern='yyyy-mm-dd',
-            font=('Arial', 11)
-        )
-        widget.pack(side="left", padx=(10, 5))
-        widget.set_date(datetime.now())
-        
-        setattr(self, attr_name, widget)
+    def crear_campo_texto(self, parent, label, attr, default):
+        f = ctk.CTkFrame(parent, fg_color="transparent")
+        f.pack(fill="x", padx=12, pady=2)
+        ctk.CTkLabel(f, text=label, font=ctk.CTkFont(size=10),
+                    width=120, anchor="w").pack(side="left")
+        w = ctk.CTkEntry(f, width=90, height=26, font=ctk.CTkFont(size=10))
+        w.insert(0, default)
+        w.pack(side="left", padx=4)
+        setattr(self, attr, w)
     
-    
-    def crear_campo_texto(self, parent, label_text, attr_name, default_value):
-        """Crea un campo de texto simple."""
-        frame = ctk.CTkFrame(parent, fg_color="transparent")
-        frame.pack(fill="x", padx=15, pady=4)
-        
-        ctk.CTkLabel(
-            frame,
-            text=label_text,
-            font=ctk.CTkFont(size=12),
-            width=180,
-            anchor="w"
-        ).pack(side="left")
-        
-        widget = ctk.CTkEntry(
-            frame,
-            width=120,
-            height=30,
-            font=ctk.CTkFont(size=12)
-        )
-        widget.insert(0, default_value)
-        widget.pack(side="left", padx=(10, 5))
-        
-        setattr(self, attr_name, widget)
-    
-    
-    def actualizar_preview(self, event=None):
-        """Calcula y muestra cuántos registros se van a generar."""
-        try:
-            dias = int(self.entry_dias.get())
-            intervalo = int(self.entry_intervalo.get())
-            
-            hora_ini = datetime.strptime(self.entry_hora_ini.get(), "%H:%M:%S")
-            hora_fin = datetime.strptime(self.entry_hora_fin.get(), "%H:%M:%S")
-            
-            segundos_por_dia = (hora_fin - hora_ini).total_seconds()
-            if segundos_por_dia <= 0:
-                self.lbl_preview.configure(
-                    text="⚠️  La hora de fin debe ser mayor que la hora de inicio",
-                    text_color=COLOR_TEXTO_WARN
-                )
-                return
-            
-            registros_por_dia = int(segundos_por_dia / intervalo)
-            total_registros = registros_por_dia * dias
-            
-            self.lbl_preview.configure(
-                text=f"📊  Vista previa:\n"
-                     f"     • {registros_por_dia:,} registros/día\n"
-                     f"     • {total_registros:,} registros totales",
-                text_color=COLOR_TEXTO_INFO
-            )
-        except Exception as e:
-            self.lbl_preview.configure(
-                text=f"⚠️  Verifica los valores",
-                text_color=COLOR_TEXTO_WARN
-            )
-    
-    
-    # ============================================================
-    # CONSOLA (COLUMNA DERECHA)
-    # ============================================================
     
     def crear_consola(self):
-        """Crea la consola de registro y progreso."""
+        head = ctk.CTkFrame(self.frame_der, fg_color=COLOR_EXITO, corner_radius=8)
+        head.grid(row=0, column=0, sticky="ew", padx=8, pady=(8, 4))
+        ctk.CTkLabel(head, text="CONSOLA",
+                    font=ctk.CTkFont(size=15, weight="bold"),
+                    text_color="white").pack(pady=10)
         
-        # Título de la consola
-        frame_titulo = ctk.CTkFrame(self.frame_der, fg_color=COLOR_EXITO, corner_radius=8)
-        frame_titulo.grid(row=0, column=0, sticky="ew", padx=10, pady=(10, 5))
+        box = ctk.CTkFrame(self.frame_der, fg_color="transparent")
+        box.grid(row=1, column=0, sticky="nsew", padx=8, pady=(0, 8))
+        box.grid_rowconfigure(0, weight=1)
+        box.grid_columnconfigure(0, weight=1)
         
-        ctk.CTkLabel(
-            frame_titulo,
-            text="CONSOLA",
-            font=ctk.CTkFont(size=20, weight="bold"),
-            text_color="white"
-        ).pack(pady=15, padx=20)
+        self.log_box = ctk.CTkTextbox(box, font=ctk.CTkFont(size=10, family="Consolas"),
+                                       wrap="word", fg_color="#1a1a1a",
+                                       text_color="#e0e0e0", corner_radius=8)
+        self.log_box.grid(row=0, column=0, sticky="nsew", pady=(0, 6))
         
-        # Frame de consola + estado
-        frame_consola = ctk.CTkFrame(self.frame_der, fg_color="transparent")
-        frame_consola.grid(row=1, column=0, sticky="nsew", padx=10, pady=(0, 10))
-        frame_consola.grid_rowconfigure(0, weight=1)
-        frame_consola.grid_columnconfigure(0, weight=1)
+        prog = ctk.CTkFrame(box, fg_color=COLOR_SECCION, corner_radius=8)
+        prog.grid(row=1, column=0, sticky="ew")
         
-        # Área de texto (log)
-        self.text_log = ctk.CTkTextbox(
-            frame_consola,
-            font=ctk.CTkFont(size=12, family="Consolas"),
-            wrap="word",
-            fg_color="#1a1a1a",
-            text_color="#e0e0e0",
-            corner_radius=8
-        )
-        self.text_log.grid(row=0, column=0, sticky="nsew", pady=(0, 10))
-        
-        # Frame de progreso + estado
-        frame_progreso = ctk.CTkFrame(frame_consola, fg_color=COLOR_FONDO_SECCION, corner_radius=8)
-        frame_progreso.grid(row=1, column=0, sticky="ew")
-        
-        # Barra de progreso
-        self.progress = ctk.CTkProgressBar(
-            frame_progreso,
-            height=15,
-            corner_radius=8,
-            progress_color=COLOR_PRIMARIO
-        )
-        self.progress.pack(fill="x", padx=15, pady=(12, 8))
+        self.progress = ctk.CTkProgressBar(prog, height=12, corner_radius=6,
+                                           progress_color=COLOR_PRIMARIO)
+        self.progress.pack(fill="x", padx=10, pady=(8, 4))
         self.progress.set(0)
         
-        # Estado actual
-        self.lbl_estado = ctk.CTkLabel(
-            frame_progreso,
-            text="⏸️  En espera...",
-            font=ctk.CTkFont(size=13, weight="bold"),
-            text_color="gray",
-            anchor="w"
-        )
-        self.lbl_estado.pack(fill="x", padx=15, pady=(0, 12))
+        self.lbl_estado = ctk.CTkLabel(prog, text="En espera...",
+                                       font=ctk.CTkFont(size=10, weight="bold"),
+                                       text_color="gray", anchor="w")
+        self.lbl_estado.pack(fill="x", padx=10, pady=(0, 8))
     
     
-    # ============================================================
-    # MÉTODOS DE LA INTERFAZ
-    # ============================================================
-    
-    def log(self, mensaje):
-        self.text_log.insert("end", mensaje + "\n")
-        self.text_log.see("end")
+    def log(self, msg):
+        self.log_box.insert("end", msg + "\n")
+        self.log_box.see("end")
         self.update()
     
     
-    def set_estado(self, texto, color="gray"):
-        self.lbl_estado.configure(text=texto, text_color=color)
+    def estado(self, msg, color="gray"):
+        self.lbl_estado.configure(text=msg, text_color=color)
         self.update()
     
     
-    def seleccionar_archivo(self):
-        ruta = filedialog.askopenfilename(
-            title="Seleccionar CSV",
-            filetypes=[("CSV", "*.csv"), ("Todos", "*.*")]
-        )
-        if ruta:
-            self.archivo_csv_seleccionado = ruta
-            self.lbl_archivo.configure(
-                text=f"✅ {os.path.basename(ruta)}",
-                text_color=COLOR_TEXTO_EXITO
-            )
-            self.log(f"📂 Archivo seleccionado: {os.path.basename(ruta)}")
-            self.set_estado("✅ Archivo listo", COLOR_TEXTO_EXITO)
+    def sel_csv(self):
+        r = filedialog.askopenfilename(title="Seleccionar CSV",
+                                       filetypes=[("CSV", "*.csv"), ("Todos", "*.*")])
+        if r:
+            self.csv_seleccionado = r
+            self.lbl_csv.configure(text=f"{os.path.basename(r)}", text_color=COLOR_OK)
+            self.log(f"CSV: {os.path.basename(r)}")
     
     
-    def seleccionar_carpeta(self):
-        ruta = filedialog.askdirectory(title="Carpeta de salida")
-        if ruta:
-            self.carpeta_salida = ruta
-            self.lbl_carpeta.configure(
-                text=f"✅ {ruta}",
-                text_color=COLOR_TEXTO_EXITO
-            )
-            self.log(f"📁 Carpeta de salida: {ruta}")
+    def sel_json_analisis(self):
+        r = filedialog.askopenfilename(title="Seleccionar JSON básico",
+                                       filetypes=[("JSON", "*.json"), ("Todos", "*.*")])
+        if r:
+            self.json_basico_analisis = r
+            self.lbl_json_analisis.configure(text=f"{os.path.basename(r)}", text_color=COLOR_OK)
+            self.log(f"JSON análisis: {os.path.basename(r)}")
     
     
-    def validar(self):
-        if not self.archivo_csv_seleccionado:
-            messagebox.showwarning("Advertencia", "Selecciona un archivo CSV")
-            return False
-        if not self.carpeta_salida:
-            messagebox.showwarning("Advertencia", "Selecciona una carpeta de salida")
-            return False
-        return True
+    def sel_json_sinteticos(self):
+        r = filedialog.askopenfilename(title="Seleccionar JSON básico",
+                                       filetypes=[("JSON", "*.json"), ("Todos", "*.*")])
+        if r:
+            self.json_basico_sinteticos = r
+            self.lbl_json_sint.configure(text=f"{os.path.basename(r)}", text_color=COLOR_OK)
+            self.log(f"JSON sintéticos: {os.path.basename(r)}")
     
     
-    def bloquear_botones(self, bloquear=True):
-        estado = "disabled" if bloquear else "normal"
-        self.btn_convertir.configure(state=estado)
-        self.btn_sinteticos.configure(state=estado)
+    def sel_carpeta(self, n):
+        r = filedialog.askdirectory(title="Carpeta de salida")
+        if r:
+            if n == 1:
+                self.carpeta_salida_1 = r
+                self.lbl_carpeta_1.configure(text=f"{r}", text_color=COLOR_OK)
+            elif n == 2:
+                self.carpeta_salida_2 = r
+                self.lbl_carpeta_2.configure(text=f"{r}", text_color=COLOR_OK)
+            elif n == 3:
+                self.carpeta_salida_3 = r
+                self.lbl_carpeta_3.configure(text=f"{r}", text_color=COLOR_OK)
+            self.log(f"Salida: {r}")
+    
+    
+    def bloquear(self, b=True):
+        e = "disabled" if b else "normal"
+        self.btn_1.configure(state=e)
+        self.btn_2.configure(state=e)
+        self.btn_3.configure(state=e)
         self.update()
     
     
-    # ============================================================
-    # CONVERSIÓN CSV → JSON
-    # ============================================================
-    
-    def convertir_a_json(self):
-        if not self.validar():
+    def accion_1(self):
+        if not self.csv_seleccionado:
+            messagebox.showwarning("Advertencia", "Selecciona un CSV")
             return
-        threading.Thread(target=self._convertir_thread, daemon=True).start()
+        if not self.carpeta_salida_1:
+            messagebox.showwarning("Advertencia", "Selecciona carpeta de salida")
+            return
+        threading.Thread(target=self._run_1, daemon=True).start()
     
     
-    def _convertir_thread(self):
+    def _run_1(self):
         try:
-            self.bloquear_botones(True)
-            self.set_estado("⏳ Procesando conversión...", COLOR_TEXTO_WARN)
-            
-            self.log("\n" + "="*70)
-            self.log("🚀 INICIANDO CONVERSIÓN CSV → JSON")
-            self.log("="*70)
+            self.bloquear(True)
+            self.estado("Procesando CSV...", COLOR_WARN)
+            self.log("\n" + "="*50)
+            self.log("CSV A JSON BÁSICO")
+            self.log("="*50)
             
             self.progress.set(0.3)
-            self.log("📖 Leyendo CSV...")
-            
-            ruta_orig, ruta_anal, total = convertir_csv_a_json(
-                self.archivo_csv_seleccionado,
-                self.carpeta_salida
-            )
+            ruta, total = csv_a_json_basico(self.csv_seleccionado, self.carpeta_salida_1)
             
             self.progress.set(1.0)
-            self.log(f"\n✅ Conversión completada exitosamente")
-            self.log(f"   📊 Total de registros: {total:,}")
-            self.log(f"   📄 JSON original: {os.path.basename(ruta_orig)}")
-            self.log(f"   📊 JSON análisis: {os.path.basename(ruta_anal)}")
+            self.log(f"\nCompletado")
+            self.log(f"   Registros: {total:,}")
+            self.log(f"   {os.path.basename(ruta)}")
+            self.estado("JSON básico OK", COLOR_OK)
             
-            self.set_estado("✅ Conversión completada", COLOR_TEXTO_EXITO)
-            
-            messagebox.showinfo(
-                "✅ Éxito",
-                f"Conversión completada\n\n"
-                f"Registros procesados: {total:,}\n\n"
-                f"Archivos generados:\n"
-                f"• {os.path.basename(ruta_orig)}\n"
-                f"• {os.path.basename(ruta_anal)}"
-            )
+            messagebox.showinfo("Éxito",
+                f"JSON básico generado\n\n{total:,} registros\n\n{os.path.basename(ruta)}")
             self.progress.set(0)
-            
         except Exception as e:
-            self.log(f"\n❌ ERROR: {str(e)}")
-            self.set_estado("❌ Error en conversión", COLOR_TEXTO_ERROR)
+            self.log(f"\nError: {e}")
+            self.estado("Error", COLOR_ERROR)
             messagebox.showerror("Error", str(e))
             self.progress.set(0)
         finally:
-            self.bloquear_botones(False)
+            self.bloquear(False)
     
     
-    # ============================================================
-    # GENERACIÓN DE DATOS SINTÉTICOS
-    # ============================================================
+    def accion_2(self):
+        if not self.json_basico_analisis:
+            messagebox.showwarning("Advertencia", "Selecciona JSON básico")
+            return
+        if not self.carpeta_salida_2:
+            messagebox.showwarning("Advertencia", "Selecciona carpeta de salida")
+            return
+        threading.Thread(target=self._run_2, daemon=True).start()
     
-    def generar_sinteticos(self):
-        if not self.validar():
+    
+    def _run_2(self):
+        try:
+            self.bloquear(True)
+            self.estado("Generando análisis...", COLOR_WARN)
+            self.log("\n" + "="*50)
+            self.log("JSON BÁSICO A ANÁLISIS")
+            self.log("="*50)
+            
+            self.progress.set(0.3)
+            ruta, carpeta_per, total = json_basico_a_analisis(
+                self.json_basico_analisis, self.carpeta_salida_2
+            )
+            
+            self.progress.set(1.0)
+            self.log(f"\nCompletado")
+            self.log(f"   Registros: {total:,}")
+            self.log(f"   Análisis: {os.path.basename(ruta)}")
+            self.log(f"   Períodos: {carpeta_per}")
+            self.estado("Análisis OK", COLOR_OK)
+            
+            messagebox.showinfo("Éxito",
+                f"Análisis generado\n\n{total:,} registros\n\n"
+                f"{os.path.basename(ruta)}\n"
+                f"Carpeta: analisis_por_periodos/")
+            self.progress.set(0)
+        except Exception as e:
+            self.log(f"\nError: {e}")
+            self.estado("Error", COLOR_ERROR)
+            messagebox.showerror("Error", str(e))
+            self.progress.set(0)
+        finally:
+            self.bloquear(False)
+    
+    
+    def accion_3(self):
+        if not self.json_basico_sinteticos:
+            messagebox.showwarning("Advertencia", "Selecciona JSON básico")
+            return
+        if not self.carpeta_salida_3:
+            messagebox.showwarning("Advertencia", "Selecciona carpeta de salida")
             return
         
         try:
             fecha_base = self.date_inicio.get_date()
-            hora_ini = datetime.strptime(self.entry_hora_ini.get(), "%H:%M:%S").time()
-            hora_fin = datetime.strptime(self.entry_hora_fin.get(), "%H:%M:%S").time()
+            h_ini = datetime.strptime(self.entry_hora_ini.get(), "%H:%M:%S").time()
+            h_fin = datetime.strptime(self.entry_hora_fin.get(), "%H:%M:%S").time()
             dias = int(self.entry_dias.get())
             intervalo = int(self.entry_intervalo.get())
             
-            if dias <= 0:
-                raise ValueError("Los días deben ser mayor a 0")
-            if intervalo <= 0:
-                raise ValueError("El intervalo debe ser mayor a 0")
+            if dias <= 0 or intervalo <= 0:
+                raise ValueError("Días e intervalo deben ser > 0")
             
-            fecha_inicio = datetime.combine(fecha_base, hora_ini)
-            fecha_fin = datetime.combine(fecha_base, hora_fin)
-            
+            f_ini = datetime.combine(fecha_base, h_ini)
+            f_fin = datetime.combine(fecha_base, h_fin)
             if dias > 1:
-                fecha_fin = fecha_fin + timedelta(days=dias - 1)
+                f_fin += timedelta(days=dias - 1)
             
-            if fecha_fin <= fecha_inicio:
-                raise ValueError("La fecha de fin debe ser posterior a la de inicio")
-            
+            if f_fin <= f_ini:
+                raise ValueError("Fecha fin debe ser posterior")
         except Exception as e:
-            messagebox.showwarning("Advertencia", f"Datos inválidos:\n{str(e)}")
+            messagebox.showwarning("Advertencia", f"Datos inválidos:\n{e}")
             return
         
-        threading.Thread(
-            target=self._sinteticos_thread,
-            args=(fecha_inicio, fecha_fin, intervalo),
-            daemon=True
-        ).start()
+        threading.Thread(target=self._run_3, args=(f_ini, f_fin, intervalo),
+                        daemon=True).start()
     
     
-    def _sinteticos_thread(self, fecha_inicio, fecha_fin, intervalo):
+    def _run_3(self, f_ini, f_fin, intervalo):
         try:
-            self.bloquear_botones(True)
-            self.set_estado("⏳ Generando sintéticos...", COLOR_TEXTO_WARN)
-            
-            self.log("\n" + "="*70)
-            self.log("🧬 INICIANDO GENERACIÓN DE DATOS SINTÉTICOS")
-            self.log("="*70)
-            self.log(f"📅 Fecha inicio:  {fecha_inicio.strftime('%Y-%m-%d %H:%M:%S')}")
-            self.log(f"📅 Fecha fin:     {fecha_fin.strftime('%Y-%m-%d %H:%M:%S')}")
-            self.log(f"⏱️  Intervalo:     {intervalo} segundos")
-            
-            self.progress.set(0.2)
-            self.log("\n📖 Leyendo datos reales para calibración...")
-            df_real = leer_csv(self.archivo_csv_seleccionado)
-            self.log(f"   ✅ {len(df_real):,} registros reales cargados")
+            self.bloquear(True)
+            self.estado("Generando sintéticos...", COLOR_WARN)
+            self.log("\n" + "="*50)
+            self.log("JSON BÁSICO A SINTÉTICOS")
+            self.log("="*50)
+            self.log(f"{f_ini} -> {f_fin}")
+            self.log(f"Intervalo: {intervalo}s")
             
             self.progress.set(0.4)
-            self.log("\n🧬 Generando datos sintéticos...")
-            self.log(f"   Mezclando escenarios realistas...")
-            
-            ruta_json, total = generar_json_sintetico(
-                df_real,
-                fecha_inicio,
-                fecha_fin,
-                intervalo,
-                self.carpeta_salida
+            ruta, total = json_basico_a_sinteticos(
+                self.json_basico_sinteticos,
+                f_ini, f_fin, intervalo,
+                {},
+                self.carpeta_salida_3
             )
             
             self.progress.set(1.0)
-            self.log(f"\n✅ Generación completada exitosamente")
-            self.log(f"   📊 Total registros: {total:,}")
-            self.log(f"   📄 Archivo: {os.path.basename(ruta_json)}")
+            self.log(f"\nCompletado")
+            self.log(f"   Total: {total:,} registros")
+            self.log(f"   {os.path.basename(ruta)}")
+            self.estado("Sintéticos OK", COLOR_OK)
             
-            self.set_estado("✅ Sintéticos generados", COLOR_TEXTO_EXITO)
-            
-            messagebox.showinfo(
-                "✅ Éxito",
-                f"Datos sintéticos generados\n\n"
-                f"Total registros: {total:,}\n\n"
-                f"Archivo:\n{os.path.basename(ruta_json)}"
-            )
+            messagebox.showinfo("Éxito",
+                f"Sintéticos generados\n\n"
+                f"Registros: {total:,}\n\n"
+                f"{os.path.basename(ruta)}")
             self.progress.set(0)
-            
         except Exception as e:
-            self.log(f"\n❌ ERROR: {str(e)}")
-            self.set_estado("❌ Error en generación", COLOR_TEXTO_ERROR)
+            self.log(f"\nError: {e}")
+            self.estado("Error", COLOR_ERROR)
             messagebox.showerror("Error", str(e))
             self.progress.set(0)
         finally:
-            self.bloquear_botones(False)
+            self.bloquear(False)
 
 
 if __name__ == "__main__":
