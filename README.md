@@ -40,14 +40,9 @@ source venv/bin/activate  # En Windows: venv\Scripts\activate
 ```
 ### Ejecución de scripts
 ```bash
-# 1. Generar datos sintéticos
-python3 /generador_datos.py
+# 1. Generar datos JSON, capturados y sinteticos, asi como su analisis
+python3 /main.py
 
-# 2. Analizar datos y detectar anomalías (pendiente)
-python3 /analizador_datos.py
-
-# 3. Generar informes con IA (fase inicial, solo comunicación)
+# 2. Generar informes con IA (fase inicial, solo comunicación)
 python3 comunicador_gem.py
 
-# 4. Ejecutar completa
-python3 pipeline_completo.py
